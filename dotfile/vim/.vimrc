@@ -24,8 +24,15 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 "
 "
 "
+"
+"去除vi的一致性,开启vim插件
+set nocompatible
+"
 "显示行号
 set nu
+"
+"显示标尺，就是在右下角显示光标位置
+set ruler
 "
 "启动时隐去援助提示
 set shortmess=atI
@@ -71,12 +78,6 @@ set background=dark
 "
 "显示匹配
 set showmatch
-"
-"显示标尺，就是在右下角显示光标位置
-set ruler
-"
-"去除vi的一致性
-set nocompatible
 "
 "允许折叠
 set foldenable
