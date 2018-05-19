@@ -13,7 +13,7 @@
   map <silent> <leader>ss :source ~/.vimrc<cr>    "快速应用.vimrc
   map <silent> <leader>ee :e ~/.vimrc<cr>   "快速编辑.vimrc
   autocmd! bufwritepost .vimrc source ~/.vimrc    "编辑完.vimrc时自动载入内存使用
-  :inoremap jjk <esc>    "用jjk代替esc
+  inoremap jjk <esc>    "用jjk代替esc
 "========================================================
 "
 "
@@ -63,14 +63,14 @@
   set cindent   "c语言智能缩进
   set smartindent   "智能缩进
 "自动补全括号
-  :inoremap ( ()<ESC>i
-  :inoremap ) <c-r>=ClosePair(')')<CR>
-  :inoremap { {<CR>}<ESC>O
-  :inoremap } <c-r>=ClosePair('}')<CR>
-  :inoremap [ []<ESC>i
-  :inoremap ] <c-r>=ClosePair(']')<CR>
-  :inoremap " ""<ESC>i
-  :inoremap ' ''<ESC>i
+  inoremap ( ()<ESC>i
+  inoremap ) <c-r>=ClosePair(')')<CR>
+  inoremap { {<CR>}<ESC>O
+  inoremap } <c-r>=ClosePair('}')<CR>
+  inoremap [ []<ESC>i
+  inoremap ] <c-r>=ClosePair(']')<CR>
+  inoremap " ""<ESC>i
+  inoremap ' ''<ESC>i
   function! ClosePair(char)
     if getline('.')[col('.') - 1] == a:char
         return "\<Right>"
