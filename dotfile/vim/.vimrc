@@ -1,7 +1,7 @@
 "
 "
 "                 JeremyChen
-"                      2018.5.5
+"                      2018.5.20
 "
 "======================================================
 "
@@ -24,6 +24,7 @@
   set nocompatible    "去除vi的一致性,开启vim插件
   syntax on   "语法高亮
   filetype plugin on    "允许根据文件类型选择插件
+  filetype plugin indent on "开启文件类型检测
   set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936     "字体设置
   set termencoding=utf-8    " 终端编码设置
   set encoding=utf-8    "编码设置
@@ -46,7 +47,7 @@
   set autoindent    "自动对齐
   set hlsearch     "高亮查找
   set ignorecase  "搜索忽略大小写
-  set completeopt=preview,menu  "代码补全
+  set completeopt=longest,preview,menu  "代码补全
 "========================================================
 "
 "
