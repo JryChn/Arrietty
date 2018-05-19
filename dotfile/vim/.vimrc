@@ -8,23 +8,11 @@
 "
 "
 "
-"======================== 设置映射 =======================
-  let mapleader = ","   " 映射快捷键为，
-  map <silent> <leader>ss :source ~/.vimrc<cr>    "快速应用.vimrc
-  map <silent> <leader>ee :e ~/.vimrc<cr>   "快速编辑.vimrc
-  autocmd! bufwritepost .vimrc source ~/.vimrc    "编辑完.vimrc时自动载入内存使用
-  inoremap jjk <esc>    "用jjk代替esc
-"========================================================
-"
-"
-"
-"
 "======================== 基础设置 =======================
 "基本功能设置
   set nocompatible    "去除vi的一致性,开启vim插件
   syntax on   "语法高亮
   filetype plugin on    "允许根据文件类型选择插件
-  filetype plugin indent on "开启文件类型检测
   set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936     "字体设置
   set termencoding=utf-8    " 终端编码设置
   set encoding=utf-8    "编码设置
@@ -48,6 +36,17 @@
   set hlsearch     "高亮查找
   set ignorecase  "搜索忽略大小写
   set completeopt=longest,preview,menu  "代码补全
+"========================================================
+"
+"
+"
+"
+"======================== 设置映射 =======================
+  let mapleader = ","   " 映射快捷键为，
+  map <silent> <leader>ss :source ~/.vimrc<cr>    "快速应用.vimrc
+  map <silent> <leader>ee :e ~/.vimrc<cr>   "快速编辑.vimrc
+  autocmd! bufwritepost .vimrc source ~/.vimrc    "编辑完.vimrc时自动载入内存使用
+  inoremap jjk <esc>    "用jjk代替esc
 "========================================================
 "
 "
@@ -86,7 +85,7 @@
   nnoremap <F2> :g/^\s*$/d<CR>    "去空行  
 
 "新建.c,.h,.sh,.java文件，自动插入文件头
-autocmd BufNewFile *.cpp,*.[ch],*.sh,*.java exec ":call SetTitle()" 
+autocmd BufNewFile cpp,[ch],.sh,.java exec ":call SetTitle()" 
 "定义函数SetTitle，自动插入文件头 
 func SetTitle() 
     "如果文件类型为.sh文件 
@@ -120,4 +119,9 @@ func SetTitle()
     "新建文件后，自动定位到文件末尾
     autocmd BufNewFile * normal G
 endfunc 
+"设置中文help
+if version >= 603
+    set helplang=cn
+    set encoding=utf-8
+endif
 "========================================================
