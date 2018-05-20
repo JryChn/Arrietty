@@ -55,7 +55,7 @@
 "======================== 高级设置 =======================
 "折叠
   set foldenable   "允许折叠  
-  set foldmethod=syntax   "根据语法折叠
+  set foldmethod=intend   "根据缩进自动折叠
 "缩进
   set tabstop=4   "tab缩进长度
   set shiftwidth=4    "移动宽度
