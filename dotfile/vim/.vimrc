@@ -35,7 +35,7 @@
   set autoindent    "自动对齐
   set hlsearch     "高亮查找
   set ignorecase  "搜索忽略大小写
-  set completeopt=longest,preview,menu  "代码补全
+" set completeopt=longest,preview,menu  "代码补全
 "========================================================
 "
 "
