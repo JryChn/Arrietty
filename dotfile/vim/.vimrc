@@ -46,7 +46,7 @@
   map <silent> <leader>ss :source ~/.vimrc<cr>    "快速应用.vimrc
   map <silent> <leader>ee :e ~/.vimrc<cr>   "快速编辑.vimrc
   autocmd! bufwritepost .vimrc source ~/.vimrc    "编辑完.vimrc时自动载入内存使用
-  inoremap jjk <esc>    "用jjk代替esc
+" inoremap jjk <esc>    "用jjk代替esc
 "========================================================
 "
 "
