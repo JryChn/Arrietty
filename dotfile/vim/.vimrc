@@ -20,6 +20,7 @@
   set fileencoding=utf-8    "编码设置
 "显示设置
   set nu    "显示行号
+  set relativenumber  "当前行号为1
   set ruler   "右下角显示光标位置
   set shortmess=atI   "启动时隐去援助提示
   set showcmd   "显示当前的按键信息
@@ -55,7 +56,6 @@
 "======================== 高级设置 =======================
 "折叠
   set foldenable   "允许折叠  
-  set foldmethod=intend   "根据缩进自动折叠
 "缩进
   set tabstop=4   "tab缩进长度
   set shiftwidth=4    "移动宽度
@@ -122,5 +122,15 @@ endfunc
 if version >= 603
     set helplang=cn
     set encoding=utf-8
+endif
+"========================================================
+"
+"
+"
+"
+"
+"======================== 插件设置 =======================
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
 endif
 "========================================================
