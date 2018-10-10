@@ -130,7 +130,25 @@ endif
 "
 "
 "======================== 插件设置 =======================
-if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
+"插件管理器
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    
+"插件
+call plug#begin()
+
+" 文件，代码搜索工具
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+" 自动补全
+"Plug 
+
+" 代码检测, 代码格式化
+"Plug
+
+call plug#end()
+    
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 "========================================================
