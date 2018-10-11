@@ -70,8 +70,6 @@
 "快捷键设置
   nnoremap <F2> :g/^\s*$/d<CR>    "去空行  
 
-"新建.c,.h,.sh,.java文件，自动插入文件头
-
 "设置中文help
 if version >= 603
     set helplang=cn
@@ -115,3 +113,32 @@ call plug#end()
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 "========================================================
+"nnoremap <silent> <leader>n :NERDTreeToggle<cr>
+inoremap <silent> <leader>n <esc> :NERDTreeToggle<cr>
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
+let g:NERDTreeHighlightFolders = 1         
+let g:NERDTreeHighlightFoldersFullName = 1 
+let g:NERDTreeDirArrowExpandable='▷'
+let g:NERDTreeDirArrowCollapsible='▼'
+
+" YCM
+let g:ycm_confirm_extra_conf = 0 
+let g:ycm_error_symbol = '✗'
+let g:ycm_warning_symbol = '✗'
+let g:ycm_seed_identifiers_with_syntax = 1 
+let g:ycm_complete_in_comments = 1 
+let g:ycm_complete_in_strings = 1 
+let g:ycm_server_python_interpreter = '/usr/bin/python'
+let g:ycm_python_binary_path = 'python'
+nnoremap <leader>u :YcmCompleter GoToDeclaration<cr>
+nnoremap <leader>i :YcmCompleter GoToDefinition<cr> 
+nnoremap <leader>o :YcmCompleter GoToInclude<cr>
+nnoremap <leader>ff :YcmCompleter FixIt<cr>
+nmap <F5> :YcmDiags<cr>
+
+
+"template 
+let g:email=jeremychen@djeremychen.com
+let g:username=Jeremy Chen
