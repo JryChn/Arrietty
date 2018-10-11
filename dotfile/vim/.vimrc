@@ -39,7 +39,7 @@
   set hlsearch     "高亮查找
   set incsearch   " 开启实时搜索功能
   set ignorecase  "搜索忽略大小写
-" set completeopt=longest,preview,menu  "代码补全显示补全列表
+  set completeopt=longest,preview,menu  "代码补全显示补全列表
 "========================================================
 "
 "
