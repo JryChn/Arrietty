@@ -11,16 +11,18 @@
 "======================== 基础设置 =======================
 "基本功能设置
   set nocompatible    "去除vi的一致性,开启vim插件
+  syntax enable            " 开启语法高亮功能
   syntax on   "语法高亮
   filetype plugin on    "允许根据文件类型选择插件
   set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936     "字体设置
+  set t_Co=256             " 开启256色支持
   set termencoding=utf-8    " 终端编码设置
   set encoding=utf-8    "编码设置
   set fileencodings=ucs-bom,utf-8,cp936   "编码设置
   set fileencoding=utf-8    "编码设置
 "显示设置
   set nu    "显示行号
-  set relativenumber  "当前行号为1
+  set relativenumber  "当前行号
   set ruler   "右下角显示光标位置
   set shortmess=atI   "启动时隐去援助提示
   set showcmd   "显示当前的按键信息
@@ -35,8 +37,9 @@
   set confirm   "没有保存或文件只读时弹出确认
   set autoindent    "自动对齐
   set hlsearch     "高亮查找
+  set incsearch   " 开启实时搜索功能
   set ignorecase  "搜索忽略大小写
-" set completeopt=longest,preview,menu  "代码补全
+" set completeopt=longest,preview,menu  "代码补全显示补全列表
 "========================================================
 "
 "
@@ -64,22 +67,6 @@
   set autoindent  "自动缩进
   set cindent   "c语言智能缩进
   set smartindent   "智能缩进
-"自动补全括号
-  inoremap ( ()<ESC>i
-  inoremap ) <c-r>=ClosePair(')')<CR>
-  inoremap { {<CR>}<ESC>O
-  inoremap } <c-r>=ClosePair('}')<CR>
-  inoremap [ []<ESC>i
-  inoremap ] <c-r>=ClosePair(']')<CR>
-  inoremap " ""<ESC>i
-  inoremap ' ''<ESC>i
-  function! ClosePair(char)
-    if getline('.')[col('.') - 1] == a:char
-        return "\<Right>"
-    else
-        return a:char
-    endif
-  endfunction
 "快捷键设置
   nnoremap <F2> :g/^\s*$/d<CR>    "去空行  
 
@@ -141,11 +128,17 @@ call plug#begin()
 " 文件，代码搜索工具
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
+"自动补全引号、圆括号、花括号
+Plug 'jiangmiao/auto-pairs'
+
 " 自动补全
-"Plug 
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 " 代码检测, 代码格式化
 "Plug
+
+"代码资源管理器
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 call plug#end()
     
