@@ -140,5 +140,5 @@ nmap <F5> :YcmDiags<cr>
 
 
 "template 
-let g:email=jeremychen@djeremychen.com
-let g:username=Jeremy Chen
+let g:email='jeremychen@djeremychen.com'
+let g:username='Jeremy Chen'
