@@ -104,6 +104,9 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 " 代码检测, 代码格式化
 "Plug
 
+"插入文件头
+Plug 'aperezdc/vim-template'
+
 "代码资源管理器
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
