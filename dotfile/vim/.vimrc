@@ -88,7 +88,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     
 "插件
-call plug#begin()
+call plug#begin('~/.vim/plugged')
 
 " 文件，代码搜索工具
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
