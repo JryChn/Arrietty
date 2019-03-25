@@ -33,7 +33,7 @@
   set showmatch   "匹配括号
 
 "功能设置
-  set mouse=a   "鼠标可用
+" set mouse=a   "鼠标可用
   set confirm   "没有保存或文件只读时弹出确认
   set autoindent    "自动对齐
   set hlsearch     "高亮查找
