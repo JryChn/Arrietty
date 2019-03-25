@@ -97,7 +97,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'jiangmiao/auto-pairs'
 
 " 自动补全
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clangd-completer -- java-completer --go-completer' }
 
 " 代码检测, 代码格式化
 "Plug
@@ -108,11 +108,16 @@ Plug 'aperezdc/vim-template'
 "代码资源管理器
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
+"tags管理与显示
+Plug 'universal-ctags/ctags'
+Plug 'majutsushi/tagbar'
+
 call plug#end()
     
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 "========================================================
+" NERDTREE
 "nnoremap <silent> <leader>n :NERDTreeToggle<cr>
 inoremap <silent> <leader>n <esc> :NERDTreeToggle<cr>
 let g:NERDTreeFileExtensionHighlightFullName = 1
@@ -122,6 +127,8 @@ let g:NERDTreeHighlightFolders = 1
 let g:NERDTreeHighlightFoldersFullName = 1 
 let g:NERDTreeDirArrowExpandable='▷'
 let g:NERDTreeDirArrowCollapsible='▼'
+autocmd vimenter * NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " YCM
 let g:ycm_confirm_extra_conf = 0 
@@ -142,3 +149,10 @@ nmap <F5> :YcmDiags<cr>
 "template 
 let g:email='jeremychen@djeremychen.com'
 let g:username='Jeremy Chen'
+
+
+"tarbar
+TagbarOpenAutoClose
+TagbarOpenAutoClose
+g:tagbar_autoclose
+nnoremap <silent> <F9> :TagbarToggle<CR>
