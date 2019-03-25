@@ -103,7 +103,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clangd-completer -- java-
 "Plug
 
 "插入文件头
-Plug 'aperezdc/vim-template'
+Plug "nine2/vim-copyright"
 
 "代码资源管理器
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -147,8 +147,9 @@ nmap <F5> :YcmDiags<cr>
 
 
 "template 
-let g:email='jeremychen@djeremychen.com'
-let g:username='Jeremy Chen'
+let g:file_copyright_email='jeremychen@djeremychen.com'
+let g:file_copyright_name='Jeremy Chen'
+let g:file_copyright_auto_filetypes = ['sh', 'plx', 'pl', 'pm', 'py', 'python', 'h', 'hpp', 'c', 'cpp', 'java']
 
 
 "tarbar
