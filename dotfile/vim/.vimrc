@@ -22,7 +22,7 @@
   set fileencoding=utf-8    "编码设置
 "显示设置
   set nu    "显示行号
-  set relativenumber  "当前行号
+" set relativenumber  "当前行号
   set ruler   "右下角显示光标位置
   set shortmess=atI   "启动时隐去援助提示
   set showcmd   "显示当前的按键信息
