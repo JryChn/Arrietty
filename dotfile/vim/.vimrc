@@ -153,6 +153,5 @@ let g:username='Jeremy Chen'
 
 "tarbar
 TagbarOpenAutoClose
-TagbarOpenAutoClose
-g:tagbar_autoclose
+let g:tagbar_autoclose = 1
 nnoremap <silent> <F9> :TagbarToggle<CR>
