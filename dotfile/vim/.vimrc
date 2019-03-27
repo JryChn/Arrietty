@@ -23,6 +23,11 @@
     set shiftwidth=4
     set expandtab
     set smarttab
+    set autoindent
+    set cindent
+    set smartindent
+    filetype indent on
+    set smarttab
     set background=dark
     let g:onedark_termcolors=256
     colorscheme onedark
@@ -46,11 +51,19 @@
 "
 "
 "====================Plug option======================
+
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~./vim/autoload/plug.vim --create-dirs
+                \https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+
+
+
     call plug#begin('~/.vim/plugged')
 
 
     Plug 'nine2/vim-copyright'  "copy-right header of the file
-    Plug 'Valloric/YouCompleteMe'   "code complete
+    Plug 'Valloric/YouCompleteMe',{'do':'./install.py --clangd-completer --java-completer --go-completer'}
     Plug 'ryanoasis/vim-devicons'
     Plug 'scrooloose/nerdtree'
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -64,6 +77,8 @@
     Plug 'tpope/vim-fugitive'
     Plug 'junegunn/gv.vim'
     Plug 'mhinz/vim-startify'
+    Plug 'haya14busa/incsearch.vim'
+    Plug 'godlygeek/tabular'
 
 
     call plug#end()
@@ -94,6 +109,19 @@
     let g:airline_right_sep=' '
     let g:airline_right_alt_sep=' '
 "YCM
+    nnoremap <leader>u  :YcmCompleter GoToDeclaration<cr>
+    nnoremap <leader>i  :YcmCompleter GoTodefinition<cr>
+    nnoremap <leader>o  :YcmCompleter GoToInclude<cr>
+    nnoremap <leader>ff :YcmCompleter FixIt<cr>
+    nmap <F5>           :YcmDiags<cr>
+    let g:ycm_confirm_extra_conf=0
+    let g:ycm_error_symbol='!'
+    let g:ycm_warning_symbol='!'
+    let g:ycm_seed_identifiers_with_syntax=1
+    let g:ycm_complete_in_comments=1
+    let g:ycm_complete_in_strings=1
+    let g:ycm_server_python_interpreter='usr/bin/python'
+    let g:ycm_python_binary_path='python'
 "nerdtree
     nnoremap <silent> <leader>n :NERDTreeToggle<cr>
     let g:NERDTreeFileExtensionHighlightFullName=1
@@ -117,9 +145,13 @@ let g:NERDTreeIndicatorMapCustom={
     \ "Unkown"   : "?",
     \}
 "tarbar
-    nnoremap <silent> <leader>t :TarbarToggle<cr>
+    nnoremap <silent> <F8> :TarbarToggle<cr>
 "gv
     nnoremap <leader>g :GV<cr>
     nnoremap <leader>G :GV!<cr>
     nnoremap <leader>gg :GV><cr>
+"incsearch
+    map / <Plug>(incsearch-forward)
+    map ? <Plug>(incsearch-backward)
+    map g/ <Plug>(incsearch-stay)
 "=====================================================
