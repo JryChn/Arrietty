@@ -32,7 +32,20 @@
     let g:onedark_termcolors=256
     colorscheme onedark
 "=====================================================
-
+"
+"=====================================================
+    if has("gui_runing")
+        set guifont=Droid\ Sans\ Mono\ Nerd\ Font\ Complete:h18
+        set guioptions-=m
+        set guioptions-=T
+        set guioptions-=L
+        set guioptions-=r
+        set guioptions-=b
+        set guioptions-=0
+        set guicursor=n-v-c:ver5
+    endif
+"=====================================================
+"
 "=====================Map option======================
     map <silent> <leader>ss :source ~/.vimrc<cr>
     map <silent> <leader>ee :e ~/.vimrc<cr>
