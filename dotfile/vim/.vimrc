@@ -152,7 +152,7 @@ let g:ycm_semantic_triggers =  {
   \   'lua' : ['.', ':'],
   \   'erlang' : [':'],
   \ }
-let g:ycm_semantic_triggers.c = ['->', '.', ' ', '(', '[', '&',']']
+    let g:ycm_semantic_triggers.c = ['->', '.', ' ', '(', '[', '&',']']
 "nerdtree
     nnoremap <silent> <leader>n :NERDTreeToggle<cr>
     let g:NERDTreeFileExtensionHighlightFullName=1
@@ -160,21 +160,21 @@ let g:ycm_semantic_triggers.c = ['->', '.', ' ', '(', '[', '&',']']
     let g:NERDTreePatternMatchHighlightFullName=1
     let g:NERDTreeHighlightFolders=1
     let g:NERDTreeHighlightFoldersFullName=1
-    let g:NERDTreeDirArrowExpandable='>'
-    let g:NERDTreeDirArrowCollapsible='|'
+    let g:NERDTreeDirArrowExpandable='▷'
+    let g:NERDTreeDirArrowCollapsible='▼'
 "nerdtree-git-plugin
-let g:NERDTreeIndicatorMapCustom={
-    \ "Modified" : "*",
-    \ "Staged"   : "+",
-    \ "Untracked": "??"
-    \ "Renamed"  : "R",
-    \ "Unmerged" : "=",
-    \ "Deleted"  : "D",
-    \ "Dirty"    : "!",
-    \ "Clean"    : "C",
-    \ "Ingored"  : "I",
-    \ "Unkown"   : "?",
-    \}
+    let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
 "tarbar
     nnoremap <silent> <F8> :TarbarToggle<cr>
 "gv
