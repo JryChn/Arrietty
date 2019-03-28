@@ -4,7 +4,7 @@
 "   Author        : Jeremy Chen
 "   Email         : jeremychen@djeremychen.com
 "   File Name     : .vimrc
-"   Last Modified : 2019-03-27 14:41
+"   Last Modified : 2019-03-28 18:03
 "   Describe      : the config file of vim
 "
 " ====================================================
@@ -176,7 +176,7 @@ let g:ycm_semantic_triggers =  {
     \ "Unknown"   : "?"
     \ }
 "tarbar
-    nnoremap <silent> <F8> :TarbarToggle<cr>
+    nnoremap <silent> <F8> :TarbagToggle<cr>
 "gv
     nnoremap <leader>g :GV<cr>
     nnoremap <leader>G :GV!<cr>
