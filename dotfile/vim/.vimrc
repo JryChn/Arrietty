@@ -155,6 +155,7 @@ let g:ycm_semantic_triggers =  {
     let g:ycm_semantic_triggers.c = ['->', '.', ' ', '(', '[', '&',']']
 "nerdtree
     nnoremap <silent> <leader>n :NERDTreeToggle<cr>
+    autocmd VimEnter NERDTreeToggle
     let g:NERDTreeFileExtensionHighlightFullName=1
     let g:NERDTreeExactMatchHighlightFullName=1
     let g:NERDTreePatternMatchHighlightFullName=1
@@ -175,8 +176,9 @@ let g:ycm_semantic_triggers =  {
     \ 'Ignored'   : '☒',
     \ "Unknown"   : "?"
     \ }
-"tarbar
-    nnoremap <silent> <F8> :TarbagToggle<cr>
+"tagbar
+    nnoremap <silent> <F8> :TagbarToggle<cr>
+    autocmd VimEnter * TagbarToggle
 "gv
     nnoremap <leader>g :GV<cr>
     nnoremap <leader>G :GV!<cr>
