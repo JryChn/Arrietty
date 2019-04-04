@@ -12,5 +12,6 @@
 
 
 
-#need install: i3-wm,urxvt,zsh,vim-python,git,curl,wget,cmake,gcc,
+#need install: urxvt,zsh,vim-python,git,curl,wget,cmake,gcc,
 #ctag-exuberant,fonts,qutebrowser,virt-manager,qemu,python3,python_dev,python3dev
+#i3-gaps,i3lock-fancy,i3status,polybar,compton,rofi,fontawesome
