@@ -10,10 +10,13 @@
 #
 # ====================================================
 
-
-
-#need install: rxvt-unicode,zsh,vimpython,dev-vcs/git,curl,wget,cmake,gcc,
-#Parse-ExuberantCTags,fonts,proxychains,shadowsocks-libev,qutebrowser,virt-manager,qemu,python3,python_dev,python3dev,vlc,feh,wqy-microhei,fcitx-rime
-#i3-gaps,i3lock,i3status,polybar,compton,rofi,fontawesome
-#nvidia-drivers,xf86-video-intel,xorg-server, lightdm 
-#sysklogd,cronie,layman,alsa-lib, alsa-utils,pulseaudio,tmux,dmenu
+#need install
+##======================================
+##operating system
+#sysklogd,cronie,alsa,pulseaudio,wayland(xorg-server),(driver)
+##desktop enviorment
+#sway,sddm,(fonts),,rxvt-unicode,zsh,vimpython,compton
+##working tools
+#dev-vcs/git,curl,wget,gcc,cmake,tmux,dmenu,shadowsocks-libev,qutebrower,virt-manager,qemu
+##other tools
+#rofi,vlc,mpd,wqy-microhei
