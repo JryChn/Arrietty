@@ -13,7 +13,7 @@
 #need install
 ##======================================
 ##operating system
-#sysklogd,cronie,alsa,pulseaudio,wayland(xorg-server),(driver),power-management
+#sysklogd,cronie,alsa-lib,alsa-utils,pulseaudio,wayland(xorg-server),(driver),power-management
 ##desktop enviorment
 #sway,sddm,(fonts),,rxvt-unicode,zsh,vimpython,compton,waybar
 ##working tools
