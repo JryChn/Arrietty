@@ -15,8 +15,8 @@
 ##operating system
 #sysklogd,cronie,alsa-lib,alsa-utils,pulseaudio,wayland(xorg-server),(driver),power-management
 ##desktop enviorment
-#sway,sddm,(fonts),,rxvt-unicode,zsh,vimpython,compton,waybar
+#sway,sddm,(fonts),termite,zsh,vimpython,compton,waybar
 ##working tools
 #dev-vcs/git,curl,wget,gcc,cmake,tmux,dmenu,shadowsocks-libev,qutebrower,virt-manager,qemu
 ##other tools
-#rofi,vlc,libmpdclient,wqy-microhei
+#rofi,vlc,libmpdclient,wqy-microhei,grim
