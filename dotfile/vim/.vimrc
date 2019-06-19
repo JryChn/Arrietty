@@ -15,7 +15,7 @@
     filetype on
     filetype plugin on
     filetype indent on
-    set noncompatible
+    set nocompatible
     set t_Co=256
     set encoding=UTF-8
     set number
