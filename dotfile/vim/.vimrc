@@ -11,23 +11,33 @@
 
 
 "=====================Basic option====================
-    set noncompatible "not use vi feature but vim
+    let mapleader = ";"
     filetype on
-    filetype plugin on "choose the plug from filetype
-    let mapleader = "," "map the leader
+    filetype plugin on
+    filetype indent on
+    set noncompatible
     set t_Co=256
     set encoding=UTF-8
     set number
+    set ruler
     set cmdheight=2
     set tabstop=4
     set shiftwidth=4
+    set softtabstop=4
     set expandtab
     set smarttab
+    filetype indent on
     set autoindent
     set cindent
     set smartindent
-    filetype indent on
     set smarttab
+    set cursorline
+    set cursorcolumn
+    set hlsearch
+    set nowrap
+    set foldmethod=syntax
+    syntax enable
+    syntax on
     set background=dark
     let g:onedark_termcolors=256
     colorscheme onedark
@@ -52,14 +62,17 @@
     autocmd! bufwritepost .vimrc source /.vimrc
     nnoremap <silent> <F2> :g/^\s*$/d<CR>
     nnoremap <silent> <leader><F2> gg=G
-    nnoremap <silent> <F3> :./^/\/\/g
+    nnoremap <silent> <c-/> :./^/\/\/g
     nnoremap <silent> <leader><F3> :./\/\//^/g
+    nmap <c-s> :w<CR>
     inoremap <M-cr> <esc> :split<cr>
     nnoremap <M-cr> :split<cr>
     nnoremap <M-j> <c-w>j
     nnoremap <M-k> <c-w>k
     nnoremap <M-h> <c-w>h
     nnoremap <M-l> <c-w>l
+    vnoremap <leader>y "+y
+    nmap <leader>p "+p
 "=====================================================
 "
 "
@@ -91,6 +104,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     Plug 'mhinz/vim-startify'
     Plug 'haya14busa/incsearch.vim'
     Plug 'godlygeek/tabular'
+    Plug 'nathanaelkane/vim-indent-guides'
 
 
     call plug#end()
@@ -108,7 +122,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     nnoremap <leader>H :CopyrightUpdate<cr>
     let g:file_copyright_email='jeremychen@djeremychen.com'
     let g:file_copyright_name='Jeremy Chen'
-    let g:file_copyright_auto_filetype=['sh','c','h','cpp','java','vimrc']
+    let g:file_copyright_auto_filetype=['sh','c','h','cpp','java','py','vimrc']
 "aireline
     let g:airline_theme="onedark"
     let g:airline_powerline_fonts=1
@@ -153,6 +167,39 @@ let g:ycm_semantic_triggers =  {
   \   'erlang' : [':'],
   \ }
     let g:ycm_semantic_triggers.c = ['->', '.', ' ', '(', '[', '&',']']
+    let g:tagbar_type_cpp = {
+    \ 'kinds' : [
+         \ 'c:classes:0:1',
+         \ 'd:macros:0:1',
+         \ 'e:enumerators:0:0', 
+         \ 'f:functions:0:1',
+         \ 'g:enumeration:0:1',
+         \ 'l:local:0:1',
+         \ 'm:members:0:1',
+         \ 'n:namespaces:0:1',
+         \ 'p:functions_prototypes:0:1',
+         \ 's:structs:0:1',
+         \ 't:typedefs:0:1',
+         \ 'u:unions:0:1',
+         \ 'v:global:0:1',
+         \ 'x:external:0:1'
+     \ ],
+     \ 'sro'        : '::',
+     \ 'kind2scope' : {
+         \ 'g' : 'enum',
+         \ 'n' : 'namespace',
+         \ 'c' : 'class',
+         \ 's' : 'struct',
+         \ 'u' : 'union'
+     \ },
+     \ 'scope2kind' : {
+         \ 'enum'      : 'g',
+         \ 'namespace' : 'n',
+         \ 'class'     : 'c',
+         \ 'struct'    : 's',
+         \ 'union'     : 'u'
+     \ }
+\ }
 "nerdtree
     nnoremap <silent> <leader>n :NERDTreeToggle<cr>
     autocmd VimEnter NERDTreeToggle
@@ -177,6 +224,9 @@ let g:ycm_semantic_triggers =  {
     \ "Unknown"   : "?"
     \ }
 "tagbar
+    let tagbar_left=1
+    let tagbar_width=32
+    let g:tagbar_compact=1
     nnoremap <silent> <F8> :TagbarToggle<cr>
     autocmd VimEnter * TagbarToggle
 "gv
@@ -187,4 +237,8 @@ let g:ycm_semantic_triggers =  {
     map / <Plug>(incsearch-forward)
     map ? <Plug>(incsearch-backward)
     map g/ <Plug>(incsearch-stay)
+"vim-indent-guides
+    let g:indent_guides_enable_on_vim_startup=1
+    let g:indent_guides_start_level=2
+    let g:indent_guides_guide_size=1
 "=====================================================
