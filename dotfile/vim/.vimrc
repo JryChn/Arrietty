@@ -95,7 +95,7 @@ endif
     Plug 'scrooloose/nerdtree'
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
     Plug 'Xuyuanp/nerdtree-git-plugin'
-    Plug 'majutsushi/tagbar'
+  "  Plug 'majutsushi/tagbar'
     Plug 'jiangmiao/auto-pairs'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
@@ -155,58 +155,6 @@ endif
     let g:ycm_complete_in_strings=1
     let g:ycm_server_python_interpreter='usr/bin/python'
     let g:ycm_python_binary_path='python'
-"ctags
-set tags+=/usr/include/tags
-set tags+=~/.vim/systags
-set tags+=~/.vim/x86_64-linux-gnu-systags
-let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_semantic_triggers =  {
-  \   'c' : ['->', '.','re![_a-zA-z0-9]'],
-  \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
-  \             're!\[.*\]\s'],
-  \   'ocaml' : ['.', '#'],
-  \   'cpp,objcpp' : ['->', '.', '::','re![_a-zA-Z0-9]'],
-  \   'perl' : ['->'],
-  \   'php' : ['->', '::'],
-  \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
-  \   'ruby' : ['.', '::'],
-  \   'lua' : ['.', ':'],
-  \   'erlang' : [':'],
-  \ }
-    let g:ycm_semantic_triggers.c = ['->', '.', ' ', '(', '[', '&',']']
-    let g:tagbar_type_cpp = {
-    \ 'kinds' : [
-         \ 'c:classes:0:1',
-         \ 'd:macros:0:1',
-         \ 'e:enumerators:0:0', 
-         \ 'f:functions:0:1',
-         \ 'g:enumeration:0:1',
-         \ 'l:local:0:1',
-         \ 'm:members:0:1',
-         \ 'n:namespaces:0:1',
-         \ 'p:functions_prototypes:0:1',
-         \ 's:structs:0:1',
-         \ 't:typedefs:0:1',
-         \ 'u:unions:0:1',
-         \ 'v:global:0:1',
-         \ 'x:external:0:1'
-     \ ],
-     \ 'sro'        : '::',
-     \ 'kind2scope' : {
-         \ 'g' : 'enum',
-         \ 'n' : 'namespace',
-         \ 'c' : 'class',
-         \ 's' : 'struct',
-         \ 'u' : 'union'
-     \ },
-     \ 'scope2kind' : {
-         \ 'enum'      : 'g',
-         \ 'namespace' : 'n',
-         \ 'class'     : 'c',
-         \ 'struct'    : 's',
-         \ 'union'     : 'u'
-     \ }
-\ }
 "nerdtree
     let NERDTreeWinPos="left"
     nnoremap <silent> <leader>n :NERDTreeToggle<cr>
@@ -232,11 +180,11 @@ let g:ycm_semantic_triggers =  {
     \ "Unknown"   : "?"
     \ }
 "tagbar
-    let tagbar_right=1
-    let tagbar_width=32
-    let g:tagbar_compact=1
-    nnoremap <silent> <F8> :TagbarToggle<cr>
-    autocmd VimEnter * TagbarToggle
+"    let tagbar_right=1
+"    let tagbar_width=32
+"    let g:tagbar_compact=1
+"    nnoremap <silent> <F8> :TagbarToggle<cr>
+"    autocmd VimEnter * TagbarToggle
 "gv
     nnoremap <leader>g :GV<cr>
     nnoremap <leader>G :GV!<cr>
