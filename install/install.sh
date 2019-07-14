@@ -13,10 +13,11 @@
 #need install
 ##======================================
 ##operating system
-#sysklogd,cronie,alsa-lib,alsa-utils,pulseaudio,wayland,(driver),power-management
+#layman (+gig,+gentoo_zh,+wayfire-desktop)
+#sysklogd,cronie,alsa-lib,alsa-utils,pulseaudio,wayland,termite
 ##desktop enviorment
-#sway,sddm,fontawesome,rxvt-unicode,zsh,vimpython,compton
+#sway(waybar),sddm,fontawesome,zsh(oh-my-zsh),vimpython
 ##working tools
-#dev-vcs/git,curl,wget,gcc,cmake,tmux,rofi,shadowsocks-libev,qutebrowser,virt-manager,qemu
+#dev-vcs/git,curl,wget,tmux,rofi,trojan,qutebrowser,virt-manager,qemu
 ##other tools
-#rofi,vlc,libmpdclient,wqy-microhei,grim
+#vlc,libmpdclient,wqy-microhei,grim
