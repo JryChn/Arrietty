@@ -30,12 +30,12 @@ set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
 
-set $Locker (~/.my_scripts/.data/sway_start_lockscreen.sh&)
+set $Locker swaylock
 set $VolUpdate (pkill -SIGRTMIN+1 waybar)
 set $PlayerUpdate (pkill -SIGRTMIN+2 waybar)
 
-set $Font "Cantarell 13"
-
+#set $Font "Cantarell 13"
+set $Font "FontAwesome5Free"
 
 ##
 # Font
@@ -191,8 +191,7 @@ bindsym $mod+m bar mode toggle
 ##
 
 bar {
-	position top
-	status_command while date + '%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+    swaybar_command waybar
 }
 
 ##
