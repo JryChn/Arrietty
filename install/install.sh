@@ -18,6 +18,6 @@
 ##desktop enviorment
 #sway(waybar),sddm,fontawesome,zsh(oh-my-zsh),vimpython
 ##working tools
-#dev-vcs/git,curl,wget,tmux,rofi,trojan,qutebrowser,virt-manager,qemu
+#dev-vcs/git,curl,wget,tmux,rofi,trojan,qutebrowser,virt-manager,qemu,ovmf libvirt firewall obs
 ##other tools
 #vlc,libmpdclient,wqy-microhei,grim
