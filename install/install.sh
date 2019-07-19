@@ -14,10 +14,10 @@
 ##======================================
 ##operating system
 #layman (+gig,+gentoo_zh,+wayfire-desktop)
-#sysklogd,cronie,alsa-lib,alsa-utils,pulseaudio,wayland,termite
+#sysklogd,cronie,alsa-lib,alsa-utils,pulseaudio,wayland,termite,laptop-mode-tools
 ##desktop enviorment
 #sway(waybar),sddm,fontawesome,zsh(oh-my-zsh),vimpython
 ##working tools
-#dev-vcs/git,curl,wget,tmux,rofi,trojan,qutebrowser,virt-manager,qemu
+#dev-vcs/git,curl,wget,tmux,rofi,trojan,qutebrowser,virt-manager,qemu,ovmf libvirt firewall looking-glass
 ##other tools
 #vlc,libmpdclient,wqy-microhei,grim
