@@ -4,7 +4,7 @@
 "   Author        : Jeremy Chen
 "   Email         : jeremychen@djeremychen.com
 "   File Name     : .vimrc
-"   Last Modified : 2019-03-28 18:03
+"   Last Modified : 2019-08-02 16:48
 "   Describe      : the config file of vim
 "
 " ====================================================
@@ -61,7 +61,7 @@
     map <silent> <leader>ee :e ~/.vimrc<cr>
     autocmd! bufwritepost .vimrc source /.vimrc
     nnoremap <silent> <F2> :g/^\s*$/d<CR>
-    nnoremap <silent> <leader><F2> gg=G
+    nnoremap <silent> <leader><F5> gg=G
     nnoremap <silent> <c-/> :./^/\/\/g
     nnoremap <silent> <leader><F3> :./\/\//^/g
     nmap <c-s> :w<CR>
@@ -90,12 +90,15 @@ endif
 
     Plug 'nine2/vim-copyright'  "copy-right header of the file
     Plug 'zxqfl/tabnine-vim' ",{'do':'./install.py --clangd-completer --java-completer --go-completer'}
+    Plug 'google/vim-codefmt'
+    Plug 'google/vim-maktaba'
+    Plug 'google/vim-glaive'
     Plug 'SirVer/ultisnips'
+    Plug 'rhysd/vim-grammarous'
     Plug 'ryanoasis/vim-devicons'
     Plug 'scrooloose/nerdtree'
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
     Plug 'Xuyuanp/nerdtree-git-plugin'
-  "  Plug 'majutsushi/tagbar'
     Plug 'jiangmiao/auto-pairs'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
@@ -118,12 +121,27 @@ endif
     nnoremap <leader><leader>u :PlugUpdate<cr>
     nnoremap <leader><leader>c :PlugClean<cr>
 "
+"vim-codefmt
+    nnoremap <silent><leader><leader><F5> :FormatLines<CR>
+    augroup autoformat_settings
+    autocmd FileType bzl AutoFormatBuffer buildifier
+    autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
+    autocmd FileType dart AutoFormatBuffer dartfmt
+    autocmd FileType go AutoFormatBuffer gofmt
+    autocmd FileType gn AutoFormatBuffer gn
+    autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
+    autocmd FileType java AutoFormatBuffer google-java-format
+    autocmd FileType python AutoFormatBuffer yapf
+    autocmd FileType vue AutoFormatBuffer prettier
+    augroup END
 "vim-copyright
     nnoremap <leader>h :CopyrightAdd<cr>
-    nnoremap <leader>H :CopyrightUpdate<cr>
+    "nnoremap <leader>H :CopyrightUpdate<cr>
     let g:file_copyright_email='jeremychen@djeremychen.com'
     let g:file_copyright_name='Jeremy Chen'
     let g:file_copyright_auto_filetype=['sh','c','h','cpp','java','py','vimrc']
+"vim-grammarous
+    nnoremap <leader><F2> :GrammarousCheck<cr>
 "aireline
     let g:airline_theme="onedark"
     let g:airline_powerline_fonts=1
@@ -159,12 +177,6 @@ endif
     \ 'Ignored'   : '☒',
     \ "Unknown"   : "?"
     \ }
-"tagbar
-"    let tagbar_right=1
-"    let tagbar_width=32
-"    let g:tagbar_compact=1
-"    nnoremap <silent> <F8> :TagbarToggle<cr>
-"    autocmd VimEnter * TagbarToggle
 "gv
     nnoremap <leader>g :GV<cr>
     nnoremap <leader>G :GV!<cr>
