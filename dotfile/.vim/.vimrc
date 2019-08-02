@@ -89,7 +89,7 @@ endif
 
 
     Plug 'nine2/vim-copyright'  "copy-right header of the file
-    Plug 'Valloric/YouCompleteMe',{'do':'./install.py --clangd-completer --java-completer --go-completer'}
+    Plug 'zxqfl/tabnine-vim'",{'do':'./install.py --clangd-completer --java-completer --go-completer'}
     Plug 'SirVer/ultisnips'
     Plug 'ryanoasis/vim-devicons'
     Plug 'scrooloose/nerdtree'
@@ -135,26 +135,6 @@ endif
     let g:airline_left_alt_sep=' '
     let g:airline_right_sep=' '
     let g:airline_right_alt_sep=' '
-"YCM
-    highlight Pmenu ctermfg=2 ctermbg=3 guifg=#005f87 guibg=#EEE8D5
-    highlight PmenuSel ctermfg=2 ctermbg=3 guifg=#AFD700 guibg=#106900
-    nnoremap <leader>u  :YcmCompleter GoToDeclaration<cr>
-    nnoremap <leader>i  :YcmCompleter GoTodefinition<cr>
-    nnoremap <leader>o  :YcmCompleter GoToInclude<cr>
-    nnoremap <leader>ff :YcmCompleter FixIt<cr>
-    nmap <F5>           :YcmDiags<cr>
-    let g:ycm_confirm_extra_conf=0
-    let g:ycm_error_symbol='!'
-    let g:ycm_warning_symbol='!'
-    set completeopt-=preview
-    let g:ycm_cache_omnifunc=0
-    let g:ycm_seed_identifiers_with_syntax=1
-    let g:ycm_complete_in_comments=1
-    let g:ycm_collect_identifiers_from_tags_files=1
-    let g:ycm_min_num_of_chars_for_completion=1
-    let g:ycm_complete_in_strings=1
-    let g:ycm_server_python_interpreter='usr/bin/python'
-    let g:ycm_python_binary_path='python'
 "nerdtree
     let NERDTreeWinPos="left"
     nnoremap <silent> <leader>n :NERDTreeToggle<cr>
