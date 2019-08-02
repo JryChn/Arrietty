@@ -89,7 +89,7 @@ endif
 
 
     Plug 'nine2/vim-copyright'  "copy-right header of the file
-    Plug 'zxqfl/tabnine-vim'",{'do':'./install.py --clangd-completer --java-completer --go-completer'}
+    Plug 'zxqfl/tabnine-vim' ",{'do':'./install.py --clangd-completer --java-completer --go-completer'}
     Plug 'SirVer/ultisnips'
     Plug 'ryanoasis/vim-devicons'
     Plug 'scrooloose/nerdtree'
