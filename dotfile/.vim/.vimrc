@@ -88,14 +88,14 @@ endif
 
 
     Plug 'nine2/vim-copyright'  "copy-right header of the file
-    Plug 'zxqfl/tabnine-vim' ",{'do':'./install.py'}
+    Plug 'zxqfl/tabnine-vim' ,{'do':'./install.py'}
     Plug 'google/vim-codefmt'
     Plug 'google/vim-maktaba'
     Plug 'google/vim-glaive'
     Plug 'SirVer/ultisnips'
     Plug 'rhysd/vim-grammarous'
     Plug 'ryanoasis/vim-devicons'
-    Plug 'scrooloose/nerdtree'
+    Plug 'scrooloose/nerdtree',{'on':'NERDTreeToggle'}
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
     Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'jiangmiao/auto-pairs'
@@ -108,6 +108,7 @@ endif
     Plug 'haya14busa/incsearch.vim'
     Plug 'godlygeek/tabular'
     Plug 'nathanaelkane/vim-indent-guides'
+    Plug 'iamcco/markdown-preview.vim'
 
 
     call plug#end()
