@@ -4,7 +4,7 @@
 "   Author        : Jeremy Chen
 "   Email         : jeremychen@djeremychen.com
 "   File Name     : .vimrc
-"   Last Modified : 2019-08-02 16:48
+"   Last Modified : 2019-08-13 11:43
 "   Describe      : the config file of vim
 "
 " ====================================================
@@ -62,15 +62,15 @@
     autocmd! bufwritepost .vimrc source /.vimrc
     nnoremap <silent> <F2> :g/^\s*$/d<CR>
     nnoremap <silent> <leader><F5> gg=G
-    nnoremap <silent> <c-/> :./^/\/\/g
+    nnoremap <silent> <leader>/ :./^/\/\/g
     nnoremap <silent> <leader><F3> :./\/\//^/g
-    nmap <c-s> :w<CR>
-    inoremap <M-cr> <esc> :split<cr>
-    nnoremap <M-cr> :split<cr>
-    nnoremap <M-j> <c-w>j
-    nnoremap <M-k> <c-w>k
-    nnoremap <M-h> <c-w>h
-    nnoremap <M-l> <c-w>l
+    nmap <leader><leader>s :w<CR>
+    nnoremap <leader><leader>q :q<cr>
+    nnoremap <leader><cr> :split<cr>
+    nnoremap <leader>j <c-w>j
+    nnoremap <leader>k <c-w>k
+    nnoremap <leader>h <c-w>h
+    nnoremap <leader>l <c-w>l
     vnoremap <leader>y "+y
     nmap <leader>p "+p
 "=====================================================
