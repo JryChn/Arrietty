@@ -110,6 +110,7 @@ endif
     Plug 'nathanaelkane/vim-indent-guides'
     Plug 'iamcco/markdown-preview.vim'
     Plug 'tpope/vim-commentary'
+    Plug 'dense-analysis/ale'
 
 
     call plug#end()
@@ -131,7 +132,7 @@ endif
     nmap <silent> <F8> :MarkdownPreview<cr>
     nmap <silent> <F9> :MarkdownPreviewStop<cr>
 "vim-codefmt
-    nnoremap <silent><F5> :FormatLines<CR>
+    nnoremap <silent><F5> :%FormatLines<CR>
     augroup autoformat_settings
     autocmd FileType bzl AutoFormatBuffer buildifier
     autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
