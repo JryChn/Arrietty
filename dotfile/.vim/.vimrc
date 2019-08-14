@@ -40,7 +40,7 @@
     syntax on
     set background=dark
     let g:onedark_termcolors=256
-    if !empty(glob('~/.vim/plugged/vim-colorschemes/colors/onedark.vim'))
+    if !empty(glob('~/.vim/colors/onedark.vim'))
     colorscheme onedark
     endif
 "=====================================================
@@ -82,6 +82,10 @@
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
+if !empty(glob('~/.vim/plugged/vim-colorschemes/colors/onedark.vim'))&&empty(glob('~/.vim/colors/onedark.vim'))
+    silent !cp ~/.vim/plugged/vim-colorschemes/colors ~/.vim/ -rf
+endif
+
 
 
 
