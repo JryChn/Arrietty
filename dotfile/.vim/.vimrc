@@ -1,4 +1,4 @@
-" ====================================================
+
 "   Copyright (C)2019 All rights reserved.
 "
 "   Author        : Jeremy Chen
@@ -60,9 +60,8 @@
     map <silent> <leader>ss :source ~/.vimrc<cr>
     map <silent> <leader>ee :e ~/.vimrc<cr>
     autocmd! bufwritepost .vimrc source /.vimrc
-    nnoremap <silent> <F2> :g/^\s*$/d<CR>
+    nnoremap <silent> <leader><F2> :g/^\s*$/d<CR>
     nnoremap <silent> <leader><F5> gg=G
-    nnoremap <silent> <leader>/ :./^/\/\/g
     nnoremap <silent> <leader><F3> :./\/\//^/g
     nmap <leader><leader>s :w<CR>
     nnoremap <leader><leader>q :q<cr>
@@ -88,6 +87,7 @@ endif
 
 
     Plug 'nine2/vim-copyright'  "copy-right header of the file
+    Plug 'flazz/vim-colorschemes'
     Plug 'zxqfl/tabnine-vim' ,{'do':'./install.py'}
     Plug 'google/vim-codefmt'
     Plug 'google/vim-maktaba'
@@ -109,6 +109,7 @@ endif
     Plug 'godlygeek/tabular'
     Plug 'nathanaelkane/vim-indent-guides'
     Plug 'iamcco/markdown-preview.vim'
+    Plug 'tpope/vim-commentary'
 
 
     call plug#end()
@@ -121,8 +122,16 @@ endif
     nnoremap <leader><leader>u :PlugUpdate<cr>
     nnoremap <leader><leader>c :PlugClean<cr>
 "
+"vim-commentary
+    nnoremap <c-/> gcc
+    vnoremap <c-/> gc
+"colorscheme
+    nnoremap <silent><F12> :colorscheme random<cr>
+"markdown-preview
+    nmap <silent> <F8> :MarkdownPreview<cr>
+    nmap <silent> <F9> :MarkdownPreviewStop<cr>
 "vim-codefmt
-    nnoremap <silent><leader><leader><F5> :FormatLines<CR>
+    nnoremap <silent><F5> :FormatLines<CR>
     augroup autoformat_settings
     autocmd FileType bzl AutoFormatBuffer buildifier
     autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
@@ -141,7 +150,7 @@ endif
     let g:file_copyright_name='Jeremy Chen'
     let g:file_copyright_auto_filetype=['sh','c','h','cpp','java','py','vimrc']
 "vim-grammarous
-    nnoremap <leader><F2> :GrammarousCheck<cr>
+    nnoremap <F2> :GrammarousCheck<cr>
 "aireline
     let g:airline_theme="onedark"
     let g:airline_powerline_fonts=1
@@ -156,8 +165,9 @@ endif
 "nerdtree
     let NERDTreeWinPos="left"
     nnoremap <silent> <leader>n :NERDTreeToggle<cr>
-    autocmd VimEnter NERDTreeToggle
+    " autocmd VimEnter * NERDTreeToggle
     let g:NERDTreeFileExtensionHighlightFullName=1
+    let NERDTreeQuitOnOpen=1
     let g:NERDTreeExactMatchHighlightFullName=1
     let g:NERDTreePatternMatchHighlightFullName=1
     let g:NERDTreeHighlightFolders=1
