@@ -40,7 +40,7 @@
     syntax on
     set background=dark
     let g:onedark_termcolors=256
-    if !empty(glob('~/.vim/autoload/plug.vim'))
+    if !empty(glob('~/.vim/plugged/vim-colorschemes/colors/solarized.vim')
     colorscheme solarized
     endif
 "=====================================================
