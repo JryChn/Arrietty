@@ -4,7 +4,7 @@
 "   Author        : Jeremy Chen
 "   Email         : jeremychen@djeremychen.com
 "   File Name     : .vimrc
-"   Last Modified : 2019-08-13 11:43
+"   Last Modified : 2019-08-14 15:49
 "   Describe      : the config file of vim
 "
 " ====================================================
@@ -111,6 +111,7 @@ endif
     Plug 'iamcco/markdown-preview.vim'
     Plug 'tpope/vim-commentary'
     Plug 'dense-analysis/ale'
+    Plug 'Yggdroot/LeaderF',{'do':'./install.h'}
 
 
     call plug#end()
@@ -146,10 +147,9 @@ endif
     augroup END
 "vim-copyright
     nnoremap <leader>h :CopyrightAdd<cr>
-    "nnoremap <leader>H :CopyrightUpdate<cr>
+    " autocmd VimEnter * :CopyrightUpdate<cr>
     let g:file_copyright_email='jeremychen@djeremychen.com'
     let g:file_copyright_name='Jeremy Chen'
-    let g:file_copyright_auto_filetype=['sh','c','h','cpp','java','py','vimrc']
 "vim-grammarous
     nnoremap <F2> :GrammarousCheck<cr>
 "aireline
