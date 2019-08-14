@@ -40,7 +40,7 @@
     syntax on
     set background=dark
     let g:onedark_termcolors=256
-    colorscheme onedark
+    colorscheme solarized
 "=====================================================
 "
 "=====================================================
@@ -88,6 +88,7 @@ endif
 
     Plug 'nine2/vim-copyright'  "copy-right header of the file
     Plug 'flazz/vim-colorschemes'
+    Plug 'altercation/vim-colors-solarized'
     Plug 'zxqfl/tabnine-vim' ,{'do':'./install.py'}
     Plug 'google/vim-codefmt'
     Plug 'google/vim-maktaba'
@@ -111,7 +112,7 @@ endif
     Plug 'iamcco/markdown-preview.vim'
     Plug 'tpope/vim-commentary'
     Plug 'dense-analysis/ale'
-    Plug 'Yggdroot/LeaderF',{'do':'./install.h'}
+    Plug 'Yggdroot/LeaderF',{'do':'./install.sh'}
 
 
     call plug#end()
