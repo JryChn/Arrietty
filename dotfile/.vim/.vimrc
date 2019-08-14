@@ -88,7 +88,6 @@ endif
 
     Plug 'nine2/vim-copyright'  "copy-right header of the file
     Plug 'flazz/vim-colorschemes'
-    Plug 'altercation/vim-colors-solarized'
     Plug 'zxqfl/tabnine-vim' ,{'do':'./install.py'}
     Plug 'google/vim-codefmt'
     Plug 'google/vim-maktaba'
