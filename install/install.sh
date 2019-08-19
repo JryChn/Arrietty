@@ -14,7 +14,7 @@
 ##======================================
 ##operating system
 #layman (+gig,+gentoo_zh,+wayfire-desktop)
-#sysklogd,cronie,alsa-lib,alsa-utils,pulseaudio,wayland,termite,laptop-mode-tools
+#sysklogd,cronie,alsa-lib,alsa-utils,pulseaudio,wayland,termite,laptop-mode-tools networkmanager-qt
 ##desktop enviorment
 #sway(waybar),sddm,fontawesome,zsh(oh-my-zsh),vimpython,fcitx
 ##working tools
