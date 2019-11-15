@@ -4,7 +4,7 @@
 "   Author        : Jeremy Chen
 "   Email         : jeremychen@djeremychen.com
 "   File Name     : .vimrc
-"   Last Modified : 2019-08-14 15:49
+"   Last Modified : 2019-11-15 16:16
 "   Describe      : the config file of vim
 "
 " ====================================================
@@ -94,7 +94,7 @@ endif
 
     Plug 'nine2/vim-copyright'  "copy-right header of the file
     Plug 'flazz/vim-colorschemes'
-    Plug 'zxqfl/tabnine-vim' ,{'do':'./install.py'}
+    "Plug 'zxqfl/tabnine-vim' ,{'do':'./install.py'}
     Plug 'google/vim-codefmt'
     Plug 'google/vim-maktaba'
     Plug 'google/vim-glaive'
