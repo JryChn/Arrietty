@@ -152,7 +152,7 @@ endif
     autocmd FileType vue AutoFormatBuffer prettier
     augroup END
 "vim-copyright
-    nnoremap <leader>h :CopyrightAdd<cr>
+    nnoremap <leader><leader>h :CopyrightAdd<cr>
     " autocmd VimEnter * :CopyrightUpdate<cr>
     let g:file_copyright_email='jeremychen@djeremychen.com'
     let g:file_copyright_name='Jeremy Chen'
