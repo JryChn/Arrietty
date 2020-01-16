@@ -13,7 +13,7 @@
 #need install
 ##======================================
 ##operating system
-#layman (+gig,+gentoo_zh,+wayfire-desktop)
+#layman (+gig,+gentoo-zh,+wayfire-desktop)
 #sysklogd,cronie,alsa-lib,alsa-utils,pulseaudio,wayland,termite,laptop-mode-tools networkmanager-qt
 ##desktop enviorment
 #sway(waybar),cdm,fontawesome,zsh(oh-my-zsh),vimpython,fcitx
