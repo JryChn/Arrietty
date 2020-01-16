@@ -16,7 +16,7 @@
 #layman (+gig,+gentoo_zh,+wayfire-desktop)
 #sysklogd,cronie,alsa-lib,alsa-utils,pulseaudio,wayland,termite,laptop-mode-tools networkmanager-qt
 ##desktop enviorment
-#sway(waybar),sddm,fontawesome,zsh(oh-my-zsh),vimpython,fcitx
+#sway(waybar),cdm,fontawesome,zsh(oh-my-zsh),vimpython,fcitx
 ##working tools
 #dev-vcs/git,curl,wget,tmux,rofi,trojan,qutebrowser,virt-manager,qemu,ovmf libvirt firewall looking-glass
 ##other tools
