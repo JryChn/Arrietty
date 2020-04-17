@@ -62,9 +62,6 @@
     map <silent> <leader>ss :source ~/.vimrc<cr>
     map <silent> <leader>ee :e ~/.vimrc<cr>
     autocmd! bufwritepost .vimrc source /.vimrc
-    nnoremap <silent> <leader><F2> :g/^\s*$/d<CR>
-    nnoremap <silent> <leader><F5> gg=G
-    nnoremap <silent> <leader><F3> :./\/\//^/g
     nmap <leader><leader>s :w<CR>
     nnoremap <leader><leader>q :q<cr>
     nnoremap <leader><cr> :split<cr>
@@ -93,20 +90,20 @@ endif
 
 
     Plug 'nine2/vim-copyright'  "copy-right header of the file
-    Plug 'flazz/vim-colorschemes'
-    "Plug 'zxqfl/tabnine-vim' ,{'do':'./install.py'}
-    Plug 'google/vim-codefmt'
+    Plug 'flazz/vim-colorschemes'   "color schemes collection
+    Plug 'zxqfl/tabnine-vim' ,{'do':'./install.py'} "auto completation
+    Plug 'google/vim-codefmt'   "code auto format
     Plug 'google/vim-maktaba'
     Plug 'google/vim-glaive'
     Plug 'SirVer/ultisnips'
     Plug 'rhysd/vim-grammarous'
     Plug 'ryanoasis/vim-devicons'
-    Plug 'scrooloose/nerdtree',{'on':'NERDTreeToggle'}
-    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-    Plug 'Xuyuanp/nerdtree-git-plugin'
-    Plug 'jiangmiao/auto-pairs'
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+    Plug 'scrooloose/nerdtree',{'on':'NERDTreeToggle'}  "file bar 
+    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  "nerd tree file bar enhance
+    Plug 'Xuyuanp/nerdtree-git-plugin'  "nerd tree file bar ehance git function
+    Plug 'jiangmiao/auto-pairs' "auto add pairs
+    Plug 'vim-airline/vim-airline'  "beautiful airline bar
+    Plug 'vim-airline/vim-airline-themes'   "airline bar scheme
     Plug 'tpope/vim-endwise'
     Plug 'tpope/vim-fugitive'
     Plug 'junegunn/gv.vim'
@@ -115,9 +112,9 @@ endif
     Plug 'godlygeek/tabular'
     Plug 'nathanaelkane/vim-indent-guides'
     Plug 'iamcco/markdown-preview.vim'
-    Plug 'tpope/vim-commentary'
+    Plug 'tpope/vim-commentary' "auto comment stuff
     Plug 'dense-analysis/ale'
-    Plug 'Yggdroot/LeaderF',{'do':'./install.sh'}
+    Plug 'Yggdroot/LeaderF',{'do':'./install.sh'}   "fuzzy search plugin
 
 
     call plug#end()
@@ -150,6 +147,7 @@ endif
     autocmd FileType java AutoFormatBuffer google-java-format
     autocmd FileType python AutoFormatBuffer yapf
     autocmd FileType vue AutoFormatBuffer prettier
+    au BufWrite * :Autoformat
     augroup END
 "vim-copyright
     nnoremap <leader><leader>h :CopyrightAdd<cr>
