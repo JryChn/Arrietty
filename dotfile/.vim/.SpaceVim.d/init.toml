@@ -23,7 +23,8 @@
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
     enable_statusline_mode = false
-    disabled_plugins = ['nerdcommenter']
+    enable_vimfiler_gitstatus = true
+    autocomplete_method = "coc"
 
 # Enable autocomplete layer
 #[[layers]]
@@ -32,9 +33,24 @@
 #auto_completion_tab_key_behavior = "smart"
 
 [[layers]]
+name = "checkers"
+enable = false
+
+[[layers]]
+name = "tools"
+
+[[custom_plugins]]
+name = "neoclide/coc.nvim"
+merged = false
+rev = "release"
+
+[[layers]]
 name = 'shell'
 default_position = 'bottom'
 default_height = 30
+
+[[layers]]
+name = "gtags"
 
 [[layers]]
 name = "git"
@@ -51,47 +67,16 @@ name = "ui"
 name = "leaderf"
 
 [[layers]]
-name = "lang#markdown"
-
-[[layers]]
-name = "format"
-
-[[layers]]
-name = "lang#java"
-
-[[layers]]
-name = "lsp"
-filetypes = ["java"]
-[layers.override_cmd]
-java = [
-  "java",
-    "-Declipse.application=org.eclipse.jdt.ls.core.id1",
-    "-Dosgi.bundles.defaultStartLevel=4",
-    "-Declipse.product=org.eclipse.jdt.ls.core.product",
-    "-Dlog.protocol=true",
-    "-Dlog.level=NONE",
-    "-noverify",
-    "-Xmx1G",
-    "-jar",
-    "C:\\Users\\echnzxx\\.SpaceVim.d\\jdt-language-server-latest\\plugins\\org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar",
-    "-configuration",
-    "D:\\dev\\jdt-language-server-latest\\config_win",
-    "-data",
-    "C:\\Users\\echnzxx\\.cache\\javalsp"
-]
-
-[[layers]]
-name = "lang#c"
-filetypes = [
-  "c",
-  "cpp"
-]
-[layers.override_cmd]
-c = ["clangd"]
+name = "lang#vim"
 
 [[layers]]
 name = "lang#go"
 
-
 [[layers]]
-name = "lang#python"
+name = "lang#markdown"
+
+[[custom_plugins]]
+name = "jackguo380/vim-lsp-cxx-highlight"
+
+[[custom_plugins]]
+name = "skywind3000/vim-cppman"
