@@ -18,19 +18,21 @@
     enable_guicolors = true
     # Disable statusline separator, if you want to use other value, please
     # install nerd fonts
-    statusline_separator = "arrow"
-    statusline_inactive_separator = "arrow"
+    statusline_separator = "fire"
+    statusline_inactive_separator = "fire"
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
     enable_statusline_mode = false
     enable_vimfiler_gitstatus = true
     autocomplete_method = "coc"
+    filemanager = "coc-explorer"
 
 # Enable autocomplete layer
-#[[layers]]
-#name = 'autocomplete'
-#auto_completion_return_key_behavior = "complete"
-#auto_completion_tab_key_behavior = "smart"
+[[layers]]
+name = 'autocomplete'
+auto_completion_return_key_behavior = "complete"
+auto_completion_tab_key_behavior = "smart"
+auto_completion_complete_with_key_sequence_delay = 0.1
 
 [[layers]]
 name = "checkers"
@@ -38,11 +40,6 @@ enable = false
 
 [[layers]]
 name = "tools"
-
-[[custom_plugins]]
-name = "neoclide/coc.nvim"
-merged = false
-rev = "release"
 
 [[layers]]
 name = 'shell'

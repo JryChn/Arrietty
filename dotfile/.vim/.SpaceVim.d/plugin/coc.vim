@@ -54,6 +54,7 @@ let g:coc_global_extensions = [
       \ 'coc-snippets',
       \ 'coc-tsserver',
       \ 'coc-neosnippet',
+      \ 'coc-explorer',
       \]
 
 inoremap <silent><expr> <TAB>
@@ -87,3 +88,4 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endfunction
 
 nmap <leader>rn <Plug>(coc-rename)
+nmap <F3> :CocCommand explorer<CR>
