@@ -26,6 +26,7 @@
     enable_vimfiler_gitstatus = true
     autocomplete_method = "coc"
     filemanager = "coc-explorer"
+    filetree_direction = "left"
 
 # Enable autocomplete layer
 [[layers]]
