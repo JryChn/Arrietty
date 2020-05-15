@@ -4,12 +4,78 @@ set hidden
 set nobackup
 set nowritebackup
 
-call coc#config('coc.preferences',{
+call coc#config("coc.preferences",{
   \"autoTrigger": "always",
   \"maxCompleteItemCount": 10,
   \ "codeLens.enable": 1,
   \"diagnostic.virtualText": 1,
   \})
+
+call coc#config("explorer",{
+      \"icon.enableNerdfont":1,
+      \"keyMappingMode":"none",
+      \"keyMappings":{
+      \"i": 0, 
+      \"k": "nodePrev",
+      \"j": "nodeNext",
+      \"gk": "expandablePrev",
+      \"gj": "expandableNext",
+      \"*": "toggleSelection",
+      \"/": "actionMenu",
+      \"h": "collapse",
+      \"l": ["expandable?", "expand", "open"],
+      \"J": ["toggleSelection", "nodeNext"],
+      \"K": ["toggleSelection", "nodePrev"],
+      \"gl": "expandRecursive",
+      \"gh": "collapseRecursive",
+      \"<2-LeftMouse>": [
+      \"expandable?",
+      \["expanded?", "collapse", "expand"],
+      \"open"
+      \],
+      \"o": ["expanded?",
+      \"collapse", "expand"],
+      \"<cr>":
+      \["expandable?",
+      \"cd", "open"],
+      \"e": "open",
+      \"s":"open:split",
+      \"S":"open:split:plain",
+      \"E":"open:vsplit",
+      \"t":"open:tab",
+      \"<bs>":"gotoParent",
+      \"gp":"preview:labeling",
+      \"y":"copyFilepath",
+      \"Y":"copyFilename",
+      \"c":"copyFile",
+      \"x":"cutFile",
+      \"p":"pasteFile",
+      \"d":"delete",
+      \"D":"deleteForever",
+      \"a":"addFile",
+      \"A":"addDirectory",
+      \"r":"rename",
+      \".":"toggleHidden",
+      \"R":"refresh",
+      \"?":"help",
+      \"q":"quit",
+      \"<esc>":"esc",
+      \"X":"systemExecute",
+      \"gd":"listDrive",
+      \"f":"search",
+      \"F":"searchRecursive",
+      \"gf":"gotoSource:file",
+      \"gb":"gotoSource:buffer",
+      \"[[":"sourcePrev",
+      \"]]":"sourceNext",
+      \"[d":"diagnosticPrev",
+      \"]d":"diagnosticNext",
+      \"[c":"gitPrev",
+      \"]c":"gitNext",
+      \"<<":"gitStage",
+      \">>":"gitUnstage"
+      \},
+      \})
 
 
 call coc#config("languageserver", {
