@@ -41,7 +41,7 @@ set $qterm alacritty -t "Floating Terminal"
 bindsym $mod+Shift+Return exec $qterm
 
 # Current Working Dir terminal [ MOD + Control + Return ]
-bindsym $mod+Control+Return exec alacritty --working-directory $(/home/arran/.config/sway/scripts/cwd-term.sh)
+bindsym $mod+Control+Return exec bash $HOME/.config/sway/scripts/autochangeWallpaper.sh
 
 ### Application Launcher
 
