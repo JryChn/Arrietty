@@ -50,7 +50,7 @@ bindsym $mod+Control+Return exec alacritty --working-directory $(/home/arran/.co
 
 # Rofi
 set $rmenu --no-startup-id rofi -show run -modi run -line-margin 0 -line-padding 1 \
--separator-style none -font $Font -disable-history -hide-scrollbar
+-separator-style none  -disable-history -hide-scrollbar
 
 # Sway Menu
 for_window [app_id="Alacritty" title="launcher"] floating enable, sticky enable, opacity 1
