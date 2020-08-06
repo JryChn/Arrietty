@@ -1,4 +1,4 @@
-output * bg ~/.config/sway/wallpapers/private_eddie-mendoza-information-age.jpg stretch
+output * bg $HOME/.config/sway/wallpapers/wallpaper.jpg stretch
 
 #
 # Color definition
