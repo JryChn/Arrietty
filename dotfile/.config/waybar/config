@@ -2,8 +2,8 @@
     "layer": "top",
     "position": "top",
     "height": 30,
-    "modules-left": ["sway/workspaces", "custom/music"],
-    "modules-center": ["sway/window", "sway/mode"],
+    "modules-left": ["sway/workspaces"],
+    "modules-center": ["sway/window","sway/mode"],
     "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "battery", "tray", "custom/worktime", "clock"],
     "sway/workspaces": {
         "disable-scroll": true,
@@ -44,23 +44,23 @@
         "format": "{:%Y-%m-%d - %H:%M}"
     },
     "cpu": {
+        "interval": 1,
         "format": "{usage}% ",
         "on-click": "alacritty -t 'Floating Terminal' -e htop"
     },
 
     "memory": {
-        "interval": 30,
+        "interval": 1,
         "format": "{used:0.1f}/{total:0.1f}G "
     },
 
     "network": {
-        // "interface": "wlp2s0", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ifname}: {ipaddr} ",
+        "interval": 1,
+        "format-wifi": "{essid} ({signalStrength}%)  {bandwidthDownBits}",
+        "format-ethernet": "{ifname}: {ipaddr}  {bandwidthDownBits}",
         "format-disconnected": "Disconnected ⚠"
     },
     "pulseaudio": {
-        //"scroll-step": 1,
         "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon}",
         "format-muted": "",

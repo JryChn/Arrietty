@@ -9,8 +9,9 @@
 set $mod Mod4
 
 ### Notification Service
-exec mako
-
+#exec mako
+exec fcitx&
+#exec pulseaudio --start
 # Import theme first so invidual modifications can be made
 include ~/.config/sway/themes/gruvbox
 
@@ -64,10 +65,10 @@ set $rmenu --no-startup-id rofi -show run -modi run -line-margin 0 -line-padding
 
 ### Sway Idle
 exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
+         timeout 300  exec bash $HOME/.config/sway/scripts/blurLock.sh \
          timeout 600 'swaymsg "output * dpms off"' \
               resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -c 000000'
+         before-sleep exec bash $HOME/.config/sway/scripts/blurLock.sh
 
 # Dont idle on windows that are full screen
 for_window [class="^.*"] inhibit_idle fullscreen
@@ -309,9 +310,9 @@ bindsym $mod+r mode "resize"
 
 
 bar {
-	swaybar_command waybar
-
+swaybar_command waybar
 }
+
 
 # Compose key!
 input * {

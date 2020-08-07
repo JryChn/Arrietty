@@ -1,0 +1,6 @@
+2020/08/08-07:28:20.486 5ead Reusing MANIFEST /home/jeremy/.config/google-chrome/Default/Local Storage/leveldb/MANIFEST-000001
+2020/08/08-07:28:20.486 5ead Recovering log #28
+2020/08/08-07:28:20.486 5ead Reusing old log /home/jeremy/.config/google-chrome/Default/Local Storage/leveldb/000028.log 
+2020/08/08-07:29:20.940 60e3 Level-0 table #33: started
+2020/08/08-07:29:20.944 60e3 Level-0 table #33: 29042 bytes OK
+2020/08/08-07:29:20.948 60e3 Delete type=0 #28
