@@ -35,14 +35,15 @@ set $term termite
 ### Terminals
 
 # Quick floating terminal [ MOD + Shift + Return ]
-for_window [app_id="Alacritty" title="Floating Terminal"] floating enable, show_marks no
-set $qterm alacritty -t "Floating Terminal"
+for_window [app_id="termite" title="Floating Terminal"] floating enable, show_marks no
+set $qterm termite -t "Floating Terminal"
 # start a quick floating terminal
 bindsym $mod+Shift+Return exec $qterm
 
 # Current Working Dir terminal [ MOD + Control + Return ]
-bindsym $mod+Control+Return exec bash $HOME/.config/sway/scripts/autochangeWallpaper.sh
+set $chbg bash $HOME/.config/sway/scripts/autochangeWallpaper.sh
 
+bindsym $mod+Control+Return exec $chbg
 ### Application Launcher
 
 # DMenu
@@ -53,11 +54,11 @@ set $rmenu --no-startup-id rofi -show run -modi run -line-margin 0 -line-padding
 -separator-style none  -disable-history -hide-scrollbar
 
 # Sway Menu
-for_window [app_id="Alacritty" title="launcher"] floating enable, sticky enable, opacity 1
-set $swaymenu termite -d 50 30 -t launcher -e "$HOME/.config/sway/scripts/sway-launcher-desktop.sh" | xargs swagmsg exec --
+#for_window [app_id="termite" title="launcher"] floating enable, sticky enable, opacity 1
+#set $swaymenu termite -d 50 30 -t launcher -e "$HOME/.config/sway/scripts/sway-launcher-desktop.sh" | xargs swagmsg exec --
 
 # Set Menu
-set $menu $swaymenu
+#set $menu $swaymenu
 
 
 
@@ -76,9 +77,9 @@ for_window [app_id="^.*"] inhibit_idle full
 # ----------
 for_window [app_id="zenity" title="screenshot"] floating enable
 # Entire screen + menu
-bindsym print exec ~/.config/sway/scripts/screen.sh
+bindsym print exec $HOME/config/sway/scripts/screen.sh
 # Screen region + menu
-bindsym Shift+print exec ~/.config/sway/scripts/screen.sh -s
+bindsym Shift+print exec $HOME/config/sway/scripts/screen.sh -s
 
 
 ### System Menu
@@ -97,6 +98,9 @@ set $lock       swaylock --ignore-empty-password \
                 --line-uses-ring \
 
 
+# Lock to blurscreen
+set $blurlock exec bash $HOME/.config/sway/scripts/blurLock.sh
+
  
 
 # Lock to black, stop sending output to monitor.
@@ -107,12 +111,12 @@ set $locksoff   swayidle -w  \
  
 set $Pause  [L]ock, loc[K]toblack, [E]xit, [S]uspend, [R]eboot, [END] Shutdown
 mode "$Pause" {
-    bindsym e       exec --no-startup-id $wmexit,               mode "default"
-    bindsym s       exec --no-startup-id systemctl suspend,     mode "default"
-    bindsym r       exec --no-startup-id systemctl reboot,      mode "default"
-    bindsym End     exec --no-startup-id systemctl poweroff -i, mode "default"
-    bindsym l       exec --no-startup-id $lock,                 mode "default"
-    bindsym k       exec --no-startup-id $locksoff,             mode "default"
+    bindsym e       exec --no-startup-id $wmexit,                   mode "default"
+    bindsym s       exec --no-startup-id systemctl suspend,         mode "default"
+    bindsym r       exec --no-startup-id systemctl reboot,          mode "default"
+    bindsym End     exec --no-startup-id systemctl poweroff -i,     mode "default"
+    bindsym l       exec --no-startup-id $blurlock,                 mode "default"
+    bindsym k       exec --no-startup-id $locksoff,                 mode "default"
  
     bindsym Return  mode "default"
     bindsym Escape  mode "default"
@@ -321,6 +325,6 @@ for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="firefox-wayland"] opacity 1
 
 # Run the application menu on startup
-exec $menu
+#exec $menu
 
 include /etc/sway/config.d/*

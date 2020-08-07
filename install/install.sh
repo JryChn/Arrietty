@@ -5,7 +5,7 @@
 #   Author        : Jeremy Chen
 #   Email         : jeremychen@djeremychen.com
 #   File Name     : install.sh
-#   Last Modified : 2019-03-28 16:53
+#   Last Modified : 2020-08-08 11:03
 #   Describe      :
 #
 # ====================================================
@@ -20,4 +20,4 @@
 ##working tools
 #dev-vcs/git,curl,wget,tmux,rofi,trojan,qutebrowser,virt-manager,qemu,ovmf libvirt firewall looking-glass
 ##other tools
-#vlc,libmpdclient,wqy-microhei,grim
+#vlc,libmpdclient,wqy-microhei,grim,ffmpeg,mako

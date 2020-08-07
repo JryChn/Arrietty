@@ -27,3 +27,8 @@ then
     rm $HOME/.config/sway/wallpapers/`ls $HOME/.config/sway/wallpapers | sort -R | head -n 1`
   done
 fi
+
+if [ `ls $HOME/.config/sway/wallpapers | grep wallpaper.jpg | wc -l` -eq 0 ]
+then
+  mv $HOME/.config/sway/wallpapers/`ls $HOME/.config/sway/wallpapers | sort -R | head -n 1` $HOME/.config/sway/wallpapers/wallpaper.jpg
+fi
