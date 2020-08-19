@@ -78,29 +78,29 @@ call coc#config("explorer",{
       \})
 
 
-call coc#config("languageserver", {
-      \"clangd": {
-      \"command": "clangd",
-      \"rootPatterns": ["compile_flags.txt", "compile_commands.json"],
-      \"filetypes": ["c", "cpp", "objc", "objcpp"]
-      \},
-      \"bash": {
-      \  "command": "bash-language-server",
-      \  "args": ["start"],
-      \  "filetypes": ["sh"],
-      \  "ignoredRootPaths": ["~"]
-      \},
-      \"cmake": {
-      \"command": "cmake-language-server",
-      \"filetypes": ["cmake"],
-      \"rootPatterns": [
-      \"build/"
-      \ ],
-      \"initializationOptions": {
-      \"buildDirectory": "build"
-      \ }
-      \}
-      \})
+" call coc#config("languageserver", {
+"       \"clangd": {
+"       \"command": "clangd",
+"       \"rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+"       \"filetypes": ["c", "cpp", "objc", "objcpp"]
+"       \},
+"       \"bash": {
+"       \  "command": "bash-language-server",
+"       \  "args": ["start"],
+"       \  "filetypes": ["sh"],
+"       \  "ignoredRootPaths": ["~"]
+"       \},
+"       \"cmake": {
+"       \"command": "cmake-language-server",
+"       \"filetypes": ["cmake"],
+"       \"rootPatterns": [
+"       \"build/"
+"       \ ],
+"       \"initializationOptions": {
+"       \"buildDirectory": "build"
+"       \ }
+"       \}
+"       \})
 
 let g:coc_global_extensions = [
       \ 'coc-go',
@@ -117,9 +117,13 @@ let g:coc_global_extensions = [
       \ 'coc-rls',
       \ 'coc-vimlsp',
       \ 'coc-ci',
+      \ 'coc-bookmark',
       \ 'coc-snippets',
       \ 'coc-tsserver',
       \ 'coc-neosnippet',
+      \ 'coc-sh',
+      \ 'coc-emoji',
+      \ 'coc-yaml',
       \ 'coc-explorer',
       \]
 
@@ -141,6 +145,16 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
  nmap <silent> gy <Plug>(coc-type-definition)
  nmap <silent> gi <Plug>(coc-implementation)
  nmap <silent> gr <Plug>(coc-references)
+
+
+ " map the keys of bookmark
+ nmap <silent> mm <Plug>(coc-bookmark-toggle)
+ nmap <silent> ma :CocList bookmark
+ nmap <silent> mn <Plug>(coc-bookmark-next)
+ nmap <silent> mp <Plug>(coc-bookmark-prev)
+ nmap <silent> mi <Plug>(coc-bookmark-annotate)
+ nmap <silent> mc :CocCommand bookmark.clearForCurrentFile
+ nmap <silent> mx :CocCommand bookmark.clearForAllFiles
 
  " Use K for show documentation in preview window
  nnoremap <silent> K :call <SID>show_documentation()<CR>
