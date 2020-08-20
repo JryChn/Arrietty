@@ -20,4 +20,4 @@
 ##working tools
 #dev-vcs/git,curl,wget,tmux,rofi,trojan,qutebrowser,virt-manager,qemu,ovmf libvirt firewall looking-glass
 ##other tools
-#vlc,libmpdclient,wqy-microhei,grim,ffmpeg,mako,pavucontrol,telegram-desktop-bin,light,gammastep,nerd-fonts
+#vlc,libmpdclient,wqy-microhei,grim,ffmpeg,mako,pavucontrol,telegram-desktop-bin,light,gammastep,nerd-fonts,noto-fonts,w3m

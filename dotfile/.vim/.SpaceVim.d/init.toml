@@ -68,9 +68,6 @@ name = "leaderf"
 name = "lang#vim"
 
 [[layers]]
-name = "lang#go"
-
-[[layers]]
 name = "lang#markdown"
 
 [[custom_plugins]]
