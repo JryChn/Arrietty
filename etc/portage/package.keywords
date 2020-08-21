@@ -12,3 +12,4 @@ x11-terms/termite ~amd64
 x11-terms/vte-ng ~amd64
 gui-apps/gammastep ~amd64
 media-fonts/nerd-fonts ~amd64
+gui-apps/waybar ~amd64
