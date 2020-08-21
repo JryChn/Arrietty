@@ -1,0 +1,14 @@
+dev-python/pypeg2 ~amd64
+www-client/qutebrowser ~amd64
+net-proxy/trojan ~amd64
+gui-apps/grim ~amd64
+net-im/telegram-desktop-bin ~amd64
+dev-libs/light ~amd64
+# required by sys-apps/systemd-245.5::gentoo
+# required by gui-apps/mako-1.4.1::gentoo
+# required by gui-apps/mako (argument)
+=sys-apps/dbus-1.12.20 ~amd64
+x11-terms/termite ~amd64
+x11-terms/vte-ng ~amd64
+gui-apps/gammastep ~amd64
+media-fonts/nerd-fonts ~amd64

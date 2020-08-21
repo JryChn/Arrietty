@@ -1,0 +1,119 @@
+# package.use# required by dev-qt/qtcore-5.14.2::gentoo
+# required by dev-qt/qtdbus-5.14.2::gentoo
+# required by kde-frameworks/networkmanager-qt-5.70.0::gentoo
+# required by networkmanager-qt (argument)
+>=dev-libs/libpcre2-10.34 pcre16
+# required by x11-misc/xdg-utils-1.1.3_p20200220::gentoo
+# required by kde-frameworks/kf-env-5::gentoo
+# required by kde-frameworks/networkmanager-qt-5.70.0::gentoo
+# required by networkmanager-qt (argument)
+>=app-text/xmlto-0.0.28-r3 text
+# required by net-misc/networkmanager-1.26.0::gentoo[-iwd,wifi]
+# required by kde-frameworks/networkmanager-qt-5.70.0::gentoo
+# required by networkmanager-qt (argument)
+>=net-wireless/wpa_supplicant-2.9-r2 dbus
+# required by media-libs/mesa-20.0.8::gentoo
+# required by x11-libs/cairo-1.16.0-r4::gentoo[opengl]
+# required by dev-python/pycairo-1.18.2::gentoo[-test]
+# required by dev-python/pygobject-3.34.0::gentoo[cairo]
+# required by net-misc/networkmanager-1.26.0::gentoo[-test,introspection]
+# required by kde-frameworks/networkmanager-qt-5.70.0::gentoo
+# required by networkmanager-qt (argument)
+>=media-libs/libglvnd-1.3.2 X
+# required by sys-auth/polkit-0.116-r1::gentoo[systemd]
+>=sys-apps/systemd-245.5 policykit
+# required by dev-lang/spidermonkey-60.5.2_p0-r4::gentoo
+# required by sys-auth/polkit-0.116-r1::gentoo
+# required by sys-apps/systemd-245.5::gentoo[policykit]
+# required by gui-wm/sway-1.5::gentoo[systemd]
+# required by sway (argument)
+>=dev-lang/python-2.7.18-r1:2.7 sqlite
+# required by dev-qt/qtgui-5.14.2::gentoo[X]
+# required by dev-qt/qtwidgets-5.14.2::gentoo
+# required by dev-qt/qtdeclarative-5.14.2-r4::gentoo[widgets]
+# required by dev-qt/qtwayland-5.14.2::gentoo
+>=x11-libs/libxkbcommon-0.10.0-r1 X
+# required by dev-qt/qtwayland-5.14.2::gentoo
+>=dev-qt/qtgui-5.14.2 egl
+# required by x11-libs/gtk+-3.24.20::gentoo
+# required by app-i18n/fcitx-4.2.9.6::gentoo[gtk3]
+# required by app-i18n/fcitx-configtool-0.4.10::gentoo
+# required by fcitx-configtool (argument)
+>=x11-libs/cairo-1.16.0-r4 X
+# required by app-shells/fish-3.0.2::gentoo
+# required by fish (argument)
+>=dev-libs/libpcre2-10.34 pcre32
+# required by x11-misc/rofi-1.5.4-r1::gentoo
+# required by rofi (argument)
+>=x11-libs/pango-1.42.4-r2 X
+# required by dev-python/PyQtWebEngine-5.14.0::gentoo
+# required by www-client/qutebrowser-1.13.1::gentoo
+# required by qutebrowser (argument)
+>=dev-python/PyQt5-5.14.2-r1 multimedia widgets declarative network printsupport sql gui webchannel
+# required by dev-python/PyQtWebEngine-5.14.0::gentoo
+# required by www-client/qutebrowser-1.13.1::gentoo
+# required by qutebrowser (argument)
+>=dev-qt/qtwebengine-5.14.2 widgets
+# required by dev-qt/qtwebengine-5.14.2::gentoo
+# required by dev-python/PyQtWebEngine-5.14.0::gentoo
+# required by www-client/qutebrowser-1.13.1::gentoo
+# required by qutebrowser (argument)
+>=dev-qt/qtwebchannel-5.14.2 qml
+# required by dev-qt/qtwebengine-5.14.2::gentoo
+# required by dev-python/PyQtWebEngine-5.14.0::gentoo
+# required by www-client/qutebrowser-1.13.1::gentoo
+# required by qutebrowser (argument)
+>=dev-libs/libxml2-2.9.10-r1 icu
+# required by dev-qt/qtwebengine-5.14.2::gentoo
+# required by dev-python/PyQtWebEngine-5.14.0::gentoo
+# required by www-client/qutebrowser-1.13.1::gentoo
+# required by qutebrowser (argument)
+>=media-libs/libvpx-1.7.0-r1 svc
+# required by dev-qt/qtwebengine-5.14.2::gentoo
+# required by dev-python/PyQtWebEngine-5.14.0::gentoo
+# required by www-client/qutebrowser-1.13.1::gentoo
+# required by qutebrowser (argument)
+>=sys-libs/zlib-1.2.11-r2 minizip
+# required by dev-python/PyQt5-5.14.2-r1::gentoo[multimedia]
+# required by dev-python/PyQtWebEngine-5.14.0::gentoo
+# required by www-client/qutebrowser-1.13.1::gentoo
+# required by qutebrowser (argument)
+>=dev-qt/qtmultimedia-5.14.2-r1 widgets
+# required by gui-apps/mako-1.4.1::gentoo
+# required by gui-apps/mako (argument)
+>=sys-apps/dbus-1.12.18 user-session
+# required by media-sound/pavucontrol-4.0::gentoo
+# required by pavucontrol (argument)
+>=dev-cpp/gtkmm-3.24.2 X
+# required by dev-cpp/cairomm-1.12.0-r1::gentoo
+# required by dev-cpp/pangomm-2.42.1::gentoo
+# required by dev-cpp/gtkmm-3.24.2::gentoo
+# required by media-sound/pavucontrol-4.0::gentoo
+# required by pavucontrol (argument)
+>=x11-libs/cairo-1.16.0-r4 -X
+# required by net-im/telegram-desktop-bin-2.1.13-r1::gentoo
+# required by telegram-desktop-bin (argument)
+>=sys-apps/dbus-1.12.18 X
+# required by x11-libs/gtk+-3.24.20::gentoo
+# required by x11-themes/adwaita-icon-theme-3.32.0::gentoo
+>=x11-libs/cairo-1.16.0-r4 X
+# required by net-print/cups-filters-1.27.4::gentoo[postscript]
+# required by net-print/cups-2.3.3-r1::gentoo
+# required by www-client/google-chrome-84.0.4147.135::gentoo
+# required by google-chrome (argument)
+>=app-text/ghostscript-gpl-9.52-r1 cups
+# required by net-firewall/firewalld-0.7.1-r3::gentoo[nftables,iptables]
+# required by firewalld (argument)
+>=net-firewall/nftables-0.9.3-r1 xtables
+# required by net-firewall/firewalld-0.7.1-r3::gentoo[python_single_target_python3_7]
+# required by firewalld (argument)
+>=dev-python/python-slip-0.6.5 dbus
+# required by net-im/telegram-desktop-bin-2.1.13-r1::gentoo
+# required by telegram-desktop-bin (argument)
+=sys-apps/dbus-1.12.16 X user-session
+# required by gui-wm/sway-1.5::gentoo[wallpapers]
+# required by sway (argument)
+>=x11-libs/gdk-pixbuf-2.40.0 jpeg
+# required by gui-wm/sway-1.5::gentoo
+# required by sway (argument)
+>=gui-libs/wlroots-0.11.0 X
