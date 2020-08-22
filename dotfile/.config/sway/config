@@ -9,8 +9,9 @@
 set $mod Mod4
 
 ### Notification Service
-#exec mako
+exec mako
 exec fcitx&
+exec gammastep -l 39:116
 #exec pulseaudio --start
 # Import theme first so invidual modifications can be made
 include ~/.config/sway/themes/gruvbox
@@ -81,6 +82,10 @@ for_window [app_id="zenity" title="screenshot"] floating enable
 bindsym print exec $HOME/config/sway/scripts/screen.sh
 # Screen region + menu
 bindsym Shift+print exec $HOME/config/sway/scripts/screen.sh -s
+
+# Screen light level
+#bindsym Mod+F11 exec light 100
+#bindsym Mod+F12 exec light 70
 
 
 ### System Menu

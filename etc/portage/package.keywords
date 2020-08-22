@@ -13,3 +13,4 @@ x11-terms/vte-ng ~amd64
 gui-apps/gammastep ~amd64
 media-fonts/nerd-fonts ~amd64
 gui-apps/waybar ~amd64
+gui-libs/gtk-layer-shell ~amd64

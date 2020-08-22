@@ -3,6 +3,7 @@
 #change a new Wallpaper
 WALLPAPER=`ls $HOME/.config/sway/wallpapers | sort -R | head -n 1`
 echo $WALLPAPER
+mv -y $HOME/.config/sway/wallpapers/$WALLPAPER $HOME/.config/sway/wallpapers/wallpaper.jpg
 swaymsg "output * bg $HOME/.config/sway/wallpapers/'$WALLPAPER'  stretch"
 
 #Get some pics in some condition
