@@ -34,6 +34,9 @@ set $right l
 # Your preferred terminal emulator
 set $term termite
 
+# Set my default browser
+set $browser google-chrome-stable
+
 ### Terminals
 
 # Quick floating terminal [ MOD + Shift + Return ]
@@ -84,8 +87,8 @@ bindsym print exec $HOME/config/sway/scripts/screen.sh
 bindsym Shift+print exec $HOME/config/sway/scripts/screen.sh -s
 
 # Screen light level
-#bindsym Mod+F11 exec light 100
-#bindsym Mod+F12 exec light 70
+bindsym XF86MonBrightnessUp exec light -U 5
+bindsym XF86MonBrightnessDown exec light -A 5
 
 
 ### System Menu
@@ -312,6 +315,7 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+bindsym $mod+g exec $browser
 
 
 bar {
@@ -328,7 +332,7 @@ input * {
 # Custom Window Treatment
 for_window [app_id="org.clementine-player.clementine"] floating enable
 for_window [app_id="pavucontrol"] floating enable
-for_window [app_id="firefox-wayland"] opacity 1
+for_window [app_id="google-chrome-stable"] opacity 1
 
 # Run the application menu on startup
 #exec $menu
