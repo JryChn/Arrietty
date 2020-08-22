@@ -1,5 +1,0 @@
-# required by sys-kernel/genkernel-4.1.0-r2::gentoo[firmware]
-# required by genkernel (argument)
-=sys-kernel/linux-firmware-20200817 linux-fw-redistributable no-source-code
-# required by google-chrome (argument)
->=www-client/google-chrome-84.0.4147.135 google-chrome
