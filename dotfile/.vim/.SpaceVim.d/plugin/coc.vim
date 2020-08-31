@@ -149,12 +149,12 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
  " map the keys of bookmark
  nmap <silent> mm <Plug>(coc-bookmark-toggle)
- nmap <silent> ma :CocList bookmark
+ nmap <silent> ma :CocList bookmark<CR>
  nmap <silent> mn <Plug>(coc-bookmark-next)
  nmap <silent> mp <Plug>(coc-bookmark-prev)
  nmap <silent> mi <Plug>(coc-bookmark-annotate)
- nmap <silent> mc :CocCommand bookmark.clearForCurrentFile
- nmap <silent> mx :CocCommand bookmark.clearForAllFiles
+ nmap <silent> mc :CocCommand bookmark.clearForCurrentFile<CR>
+ nmap <silent> mx :CocCommand bookmark.clearForAllFiles<CR>
 
  " Use K for show documentation in preview window
  nnoremap <silent> K :call <SID>show_documentation()<CR>
