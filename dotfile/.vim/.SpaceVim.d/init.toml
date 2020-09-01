@@ -22,11 +22,13 @@
     statusline_inactive_separator = "fire"
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
+    guifont = "SauceCodePro Nerd Font Mono:h19"
     enable_statusline_mode = false
     enable_vimfiler_gitstatus = true
     autocomplete_method = "coc"
     filemanager = "coc-explorer"
     filetree_direction = "left"
+    disabled_plugins = ['vim-markdown']
 
 # Enable autocomplete layer
 [[layers]]

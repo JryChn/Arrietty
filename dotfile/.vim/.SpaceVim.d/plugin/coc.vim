@@ -125,6 +125,7 @@ let g:coc_global_extensions = [
       \ 'coc-emoji',
       \ 'coc-yaml',
       \ 'coc-explorer',
+      \ 'coc-markdownlint',
       \]
 
 inoremap <silent><expr> <TAB>
