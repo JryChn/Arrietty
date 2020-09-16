@@ -15,6 +15,6 @@ fcitx-configtool fcitx-rime dev-vcs/git curl wget tmux rofi trojan qutebrowser
 virt-manager qemu edk2-ovmf libvirt firewalld vlc libmpdclient wqy-microhei
 grim ffmpeg gui-apps/mako pavucontrol google-chrome light w3m sudo nodejs
 proxychains x11-terms/termite media-fonts/nerd-fonts gui-apps/gammastep waybar
-clang htop neofetch
+clang htop neofetch yarn gdb
 layman -a thegreatmcpain sorrow gig gentoo-zh curl -sLf
 https://spacevim.org/install.sh | bash 
