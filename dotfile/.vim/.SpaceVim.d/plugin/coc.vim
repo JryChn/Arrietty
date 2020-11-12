@@ -14,7 +14,7 @@ call coc#config("coc.preferences",{
 call coc#config("explorer",{
       \"icon.enableNerdfont":1,
       \"keyMappingMode":"none",
-      \"keyMappings":{
+      \"keyMappings.global":{
       \"i": 0, 
       \"k": "nodePrev",
       \"j": "nodeNext",
