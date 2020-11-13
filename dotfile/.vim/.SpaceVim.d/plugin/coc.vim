@@ -14,7 +14,7 @@ call coc#config("coc.preferences",{
 call coc#config("explorer",{
       \"icon.enableNerdfont":1,
       \"keyMappingMode":"none",
-      \"keyMappings":{
+      \"keyMappings.global":{
       \"i": 0, 
       \"k": "nodePrev",
       \"j": "nodeNext",
@@ -176,3 +176,9 @@ endfunction
 
 nmap <F3> :CocCommand explorer<CR>
 
+
+
+nnoremap <C-j> :res -2<CR>
+nnoremap <C-k> :res +2<CR>
+nnoremap <C-h> :vertical resize -2<CR>
+nnoremap <C-l> :vertical resize +2<CR>
