@@ -77,3 +77,7 @@ name = "jackguo380/vim-lsp-cxx-highlight"
 
 [[custom_plugins]]
 name = "skywind3000/vim-cppman"
+
+[[custom_plugins]]
+name = "puremourning/vimspector"
+on_cmd = "VimspectorInstall --all"

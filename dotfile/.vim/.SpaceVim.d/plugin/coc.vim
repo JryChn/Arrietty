@@ -117,7 +117,6 @@ let g:coc_global_extensions = [
       \ 'coc-rls',
       \ 'coc-vimlsp',
       \ 'coc-ci',
-      \ 'coc-bookmark',
       \ 'coc-snippets',
       \ 'coc-tsserver',
       \ 'coc-neosnippet',
@@ -155,13 +154,13 @@ let g:coc_snippet_prev = '<c-k>'
 
 
  " map the keys of bookmark
- nmap <silent> mm <Plug>(coc-bookmark-toggle)
- nmap <silent> ma :CocList bookmark<CR>
- nmap <silent> mn <Plug>(coc-bookmark-next)
- nmap <silent> mp <Plug>(coc-bookmark-prev)
- nmap <silent> mi <Plug>(coc-bookmark-annotate)
- nmap <silent> mc :CocCommand bookmark.clearForCurrentFile<CR>
- nmap <silent> mx :CocCommand bookmark.clearForAllFiles<CR>
+ " nmap <silent> mm <Plug>(coc-bookmark-toggle)
+ " nmap <silent> ma :CocList bookmark<CR>
+ " nmap <silent> mn <Plug>(coc-bookmark-next)
+ " nmap <silent> mp <Plug>(coc-bookmark-prev)
+ " nmap <silent> mi <Plug>(coc-bookmark-annotate)
+ " nmap <silent> mc :CocCommand bookmark.clearForCurrentFile<CR>
+ " nmap <silent> mx :CocCommand bookmark.clearForAllFiles<CR>
 
  " Use K for show documentation in preview window
  nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -182,3 +181,6 @@ nnoremap <C-j> :res -2<CR>
 nnoremap <C-k> :res +2<CR>
 nnoremap <C-h> :vertical resize -2<CR>
 nnoremap <C-l> :vertical resize +2<CR>
+
+
+let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
