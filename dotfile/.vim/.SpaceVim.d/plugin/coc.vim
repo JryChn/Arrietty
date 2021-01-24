@@ -103,16 +103,10 @@ call coc#config("explorer",{
 "       \})
 
 let g:coc_global_extensions = [
-      \ 'coc-go',
-      \ 'coc-clangd',
-      \ 'coc-tabnine',
-      \ 'coc-python',
-      \ 'coc-java',
       \ 'coc-json',
       \ 'coc-css',
-      \ 'coc-html',
+      \ 'coc-tabnine',
       \ 'coc-word',
-      \ 'coc-cmake',
       \ 'coc-dictionary',
       \ 'coc-rls',
       \ 'coc-vimlsp',
@@ -184,3 +178,4 @@ nnoremap <C-l> :vertical resize +2<CR>
 
 
 let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
+nmap <TAB> :wincmd w<CR>
