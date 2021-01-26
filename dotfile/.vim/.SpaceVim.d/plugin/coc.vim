@@ -103,8 +103,11 @@ call coc#config("explorer",{
 "       \})
 
 let g:coc_global_extensions = [
-      \ 'coc-json',
+      \ 'coc-java',
+      \ 'coc-clangd',
+      \ 'coc-python',
       \ 'coc-css',
+      \ 'coc-xml',
       \ 'coc-tabnine',
       \ 'coc-word',
       \ 'coc-dictionary',
@@ -140,11 +143,11 @@ let g:coc_snippet_next = '<c-j>'
 " Use <C-k> for jump to previous placeholder, it's default of coc.nvim
 let g:coc_snippet_prev = '<c-k>'
 
-" Remap keys for gotos
- nmap <silent> gd <Plug>(coc-definition)
- nmap <silent> gy <Plug>(coc-type-definition)
- nmap <silent> gi <Plug>(coc-implementation)
- nmap <silent> gr <Plug>(coc-references)
+ " Remap keys for gotos
+  nmap <silent> gd <Plug>(coc-definition)
+  nmap <silent> gy <Plug>(coc-type-definition)
+  nmap <silent> gi <Plug>(coc-implementation)
+  nmap <silent> gr <Plug>(coc-references)
 
 
  " map the keys of bookmark
