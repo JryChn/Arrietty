@@ -12,6 +12,7 @@
     # if you want to use more colorscheme, please load the colorscheme
     # layer
     colorscheme = "gruvbox"
+    # colorscheme = "monokai"
     colorscheme_bg = "dark"
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
@@ -36,6 +37,7 @@ name = 'autocomplete'
 auto_completion_return_key_behavior = "complete"
 auto_completion_tab_key_behavior = "smart"
 auto_completion_complete_with_key_sequence_delay = 0.1
+auto_completion_enable_snippets_in_popup = false
 
 [[layers]]
 name = "checkers"
