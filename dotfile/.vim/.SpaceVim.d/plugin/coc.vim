@@ -103,10 +103,10 @@ call coc#config("explorer",{
 "       \})
 
 let g:coc_global_extensions = [
+      \ 'coc-css',
       \ 'coc-java',
       \ 'coc-clangd',
-      \ 'coc-python',
-      \ 'coc-css',
+      \ 'coc-jedi',
       \ 'coc-xml',
       \ 'coc-tabnine',
       \ 'coc-word',

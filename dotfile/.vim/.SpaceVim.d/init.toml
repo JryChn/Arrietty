@@ -74,6 +74,9 @@ name = "leaderf"
 [[layers]]
 name = "lang#markdown"
 
+[[layers]]
+name = "lang#go"
+
 [[custom_plugins]]
 name = "jackguo380/vim-lsp-cxx-highlight"
 
