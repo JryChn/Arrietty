@@ -107,6 +107,7 @@ let g:coc_global_extensions = [
       \ 'coc-java',
       \ 'coc-clangd',
       \ 'coc-jedi',
+      \ 'coc-go',
       \ 'coc-xml',
       \ 'coc-tabnine',
       \ 'coc-word',
@@ -149,6 +150,10 @@ let g:coc_snippet_next = '<c-j>'
 " Use <C-k> for jump to previous placeholder, it's default of coc.nvim
 let g:coc_snippet_prev = '<c-k>'
 
+
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-prev)
+
  " Remap keys for gotos
   nmap <silent> gd <Plug>(coc-definition)
   nmap <silent> gy <Plug>(coc-type-definition)
@@ -167,6 +172,7 @@ let g:coc_snippet_prev = '<c-k>'
 
  " Use K for show documentation in preview window
  nnoremap <silent> K :call <SID>show_documentation()<CR>
+ autocmd CursorHold * silent call CocActionAsync('highlight')
 
  function! s:show_documentation()
    if &filetype == 'vim'
@@ -176,7 +182,7 @@ let g:coc_snippet_prev = '<c-k>'
    endif
 endfunction
 
-nmap <F3> :CocCommand explorer<CR>
+nmap <silent><F3> :CocCommand explorer<CR>
 
 
 
@@ -187,4 +193,5 @@ nnoremap <C-l> :vertical resize +2<CR>
 
 
 let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
-nmap <TAB> :wincmd w<CR>
+nmap <silent><TAB> :wincmd w<CR>
+

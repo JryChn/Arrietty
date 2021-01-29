@@ -30,6 +30,7 @@
     filemanager = "coc-explorer"
     filetree_direction = "left"
     disabled_plugins = ['vim-markdown']
+    bootstrap_before = "cocMapping#before"
 
 # Enable autocomplete layer
 [[layers]]
@@ -73,9 +74,6 @@ name = "leaderf"
 
 [[layers]]
 name = "lang#markdown"
-
-[[layers]]
-name = "lang#go"
 
 [[custom_plugins]]
 name = "jackguo380/vim-lsp-cxx-highlight"
