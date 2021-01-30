@@ -159,6 +159,7 @@ nmap <silent> ]g <Plug>(coc-diagnostic-prev)
   nmap <silent> gy <Plug>(coc-type-definition)
   nmap <silent> gi <Plug>(coc-implementation)
   nmap <silent> gr <Plug>(coc-references)
+  nmap <silent> <space>bf :call CocAction('format')<CR>
 
 
  " map the keys of bookmark

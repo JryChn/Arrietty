@@ -52,6 +52,21 @@ function! cocMapping#before() abort
   call SpaceVim#custom#LangSPC('c','nmap', ['R','r'],
         \ '<Plug>(coc-rename)',
         \ 'rename', 0)
+  " quickfix
+  call SpaceVim#custom#LangSPC('go','nmap', ['q'],
+        \ '<Plug>(coc-fix-current)',
+        \ 'Quick-Fix-Current', 0)
+  call SpaceVim#custom#LangSPC('java','nmap', ['q'],
+        \ '<Plug>(coc-fix-current)',
+        \ 'Quick-Fix-Current', 0)
+  call SpaceVim#custom#LangSPC('python','nmap', ['q'],
+        \ '<Plug>(coc-fix-current)',
+        \ 'Quick-Fix-Current', 0)
+  call SpaceVim#custom#LangSPC('c','nmap', ['q'],
+        \ '<Plug>(coc-fix-current)',
+        \ 'Quick-Fix-Current', 0)
+  "format
+  "format is definite in coc.nvim
   "other
   "-----------specify------------
   "golang
