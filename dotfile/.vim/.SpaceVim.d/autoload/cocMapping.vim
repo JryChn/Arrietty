@@ -27,7 +27,9 @@ function! cocMapping#before() abort
         " \ 'go build', 0)
   "-----------run------------
   call SpaceVim#plugins#runner#reg_runner('go', 'go run %s')
-  call SpaceVim#custom#LangSPC('go','nmap', ['r'], 'call SpaceVim#plugins#runner#open()', 'execute current file', 1)
+  call SpaceVim#custom#LangSPC('go','nmap', ['r'], 'noautocmd w | call SpaceVim#plugins#runner#open()', 'execute current file', 1)
+  call SpaceVim#plugins#runner#reg_runner('java', 'javac %s')
+  call SpaceVim#custom#LangSPC('java','nmap', ['r'], 'noautocmd w | call SpaceVim#plugins#runner#open()', 'execute current file', 1)
   "-----------import------------
   call SpaceVim#custom#LangSPC('go','nmap', ['i'],
         \ 'call CocAction(''runCommand'', ''editor.action.organizeImport'')',
@@ -41,15 +43,15 @@ function! cocMapping#before() abort
   call SpaceVim#custom#LangSPC('go','nmap', ['R','r'],
         \ '<Plug>(coc-rename)',
         \ 'rename', 0)
-  call SpaceVim#custom#LangSPC('java','nmap', ['R'],
+  call SpaceVim#custom#LangSPC('java','nmap', ['R','r'],
         \ '<Plug>(coc-rename)',
-        \ 'rename', 1)
-  call SpaceVim#custom#LangSPC('python','nmap', ['R'],
+        \ 'rename', 0)
+  call SpaceVim#custom#LangSPC('python','nmap', ['R','r'],
         \ '<Plug>(coc-rename)',
-        \ 'rename', 1)
-  call SpaceVim#custom#LangSPC('c','nmap', ['R'],
+        \ 'rename', 0)
+  call SpaceVim#custom#LangSPC('c','nmap', ['R','r'],
         \ '<Plug>(coc-rename)',
-        \ 'rename', 1)
+        \ 'rename', 0)
   "other
   "-----------specify------------
   "golang
@@ -94,4 +96,24 @@ function! cocMapping#before() abort
   call SpaceVim#custom#LangSPC('go','nmap', ['T','t'],
         \ ':CocCommand go.test.toggle',
         \ 'Toggle test file', 1)
+  " java
+  call SpaceVim#custom#LangSPCGroupName('java',['m'],'maven')
+  call SpaceVim#custom#LangSPC('java','nnoremap', ['m', 'i'], 'call call('
+        \ . string(function('s:execCMD')) . ', ["mvn clean install"])',
+        \ 'Run maven clean install', 1)
+  call SpaceVim#custom#LangSPC('java','nnoremap', ['m', 'I'], 'call call('
+        \ . string(function('s:execCMD')) . ', ["mvn install"])',
+        \ 'Run maven install', 1)
+  call SpaceVim#custom#LangSPC('java','nnoremap', ['m', 't'], 'call call('
+        \ . string(function('s:execCMD')) . ', ["mvn test"])',
+        \ 'Run maven test', 1)
+  call SpaceVim#custom#LangSPC('java','nnoremap', ['m', 'c'], 'call call('
+        \ . string(function('s:execCMD')) . ', ["mvn compile"])',
+        \ 'Run maven compile', 1)
+  call SpaceVim#custom#LangSPC('java','nnoremap', ['m', 'r'], 'call call('
+        \ . string(function('s:execCMD')) . ', ["mvn run"])',
+        \ 'Run maven run', 1)
+  call SpaceVim#custom#LangSPC('java','nnoremap', ['m', 'p'], 'call call('
+        \ . string(function('s:execCMD')) . ', ["mvn package"])',
+        \ 'Run maven package', 1)
 endfunction
