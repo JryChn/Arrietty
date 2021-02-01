@@ -151,6 +151,14 @@ let g:coc_snippet_next = '<c-j>'
 let g:coc_snippet_prev = '<c-k>'
 
 
+" Plugin key-mappings.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+
+
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-prev)
 
@@ -196,3 +204,4 @@ nnoremap <C-l> :vertical resize +2<CR>
 let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 nmap <silent><TAB> :wincmd w<CR>
 
+" inoremap <silent><C-/> <Plug>NERDCommenterInvert

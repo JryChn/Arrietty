@@ -131,4 +131,4 @@ function! cocMapping#before() abort
   call SpaceVim#custom#LangSPC('java','nnoremap', ['m', 'p'], 'call call('
         \ . string(function('s:execCMD')) . ', ["mvn package"])',
         \ 'Run maven package', 1)
-endfunction
+ endfunction
