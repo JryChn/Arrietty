@@ -182,6 +182,7 @@ nmap <silent> ]g <Plug>(coc-diagnostic-prev)
  " Use K for show documentation in preview window
  nnoremap <silent> K :call <SID>show_documentation()<CR>
  autocmd CursorHold * silent call CocActionAsync('highlight')
+ set updatetime=100
 
  function! s:show_documentation()
    if &filetype == 'vim'
