@@ -116,6 +116,8 @@ let g:coc_global_extensions = [
       \ 'coc-vimlsp',
       \ 'coc-ci',
       \ 'coc-snippets',
+      \ 'coc-html',
+      \ 'coc-css',
       \ 'coc-tsserver',
       \ 'coc-neosnippet',
       \ 'coc-sh',

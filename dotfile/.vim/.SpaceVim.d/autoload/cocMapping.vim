@@ -21,6 +21,12 @@ function! cocMapping#before() abort
   call SpaceVim#custom#LangSPC('c','xmap', ['a'], '<Plug>(coc-codeaction-selected)', 'Actions', 0)
   call SpaceVim#custom#LangSPC('python','nmap', ['a'], '<Plug>(coc-codeaction)', 'Actions', 0)
   call SpaceVim#custom#LangSPC('python','xmap', ['a'], '<Plug>(coc-codeaction-selected)', 'Actions', 0)
+  call SpaceVim#custom#LangSPC('html','nmap', ['a'], '<Plug>(coc-codeaction)', 'Actions', 0)
+  call SpaceVim#custom#LangSPC('html','xmap', ['a'], '<Plug>(coc-codeaction-selected)', 'Actions', 0)
+  call SpaceVim#custom#LangSPC('css','nmap', ['a'], '<Plug>(coc-codeaction)', 'Actions', 0)
+  call SpaceVim#custom#LangSPC('css','xmap', ['a'], '<Plug>(coc-codeaction-selected)', 'Actions', 0)
+  call SpaceVim#custom#LangSPC('javascript','nmap', ['a'], '<Plug>(coc-codeaction)', 'Actions', 0)
+  call SpaceVim#custom#LangSPC('javascript','xmap', ['a'], '<Plug>(coc-codeaction-selected)', 'Actions', 0)
   "-----------build------------
   " call SpaceVim#custom#LangSPC('go','nmap', ['b'],
         " \ '<Plug>(go-build)',
