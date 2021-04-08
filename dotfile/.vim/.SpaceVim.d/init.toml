@@ -11,9 +11,8 @@
     # set spacevim theme. by default colorscheme layer is not loaded,
     # if you want to use more colorscheme, please load the colorscheme
     # layer
-    colorscheme = "gruvbox"
-    # colorscheme = "monokai"
-    colorscheme_bg = "dark"
+    colorscheme = "seoul256"
+    # colorscheme = "monokai" colorscheme_bg = "dark"
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
     enable_guicolors = true
@@ -74,6 +73,9 @@ name = "leaderf"
 
 [[layers]]
 name = "lang#markdown"
+
+[[custom_plugins]]
+name = "junegunn/seoul256.vim"
 
 [[custom_plugins]]
 name = "jackguo380/vim-lsp-cxx-highlight"
