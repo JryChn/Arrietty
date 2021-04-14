@@ -9,10 +9,23 @@ call coc#config("coc.preferences",{
   \"maxCompleteItemCount": 10,
   \ "codeLens.enable": 1,
   \"diagnostic.virtualText": 1,
-  \"suggest.languageSourcePriority": 99,
-  \"tabnine.priority": 98,
-  \"coc.source.neosnippet.priority": 97
   \})
+
+call coc#config("suggest",{
+  \"languageSourcePriority": 99,
+  \}
+  \)
+call coc#config(
+  \"coc.source",
+  \{
+  \"neosnippet.priority":97,
+  \}
+  \)
+call coc#config(
+  \"tabnine",{
+  \"priority": 98,
+  \},
+  \)
 
 call coc#config("explorer",{
       \"icon.enableNerdfont":1,
