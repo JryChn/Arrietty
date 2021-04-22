@@ -119,6 +119,7 @@ call coc#config("explorer",{
 "       \})
 
 let g:coc_global_extensions = [
+      \ 'coc-stylelint',
       \ 'coc-css',
       \ 'coc-java',
       \ 'coc-clangd',
