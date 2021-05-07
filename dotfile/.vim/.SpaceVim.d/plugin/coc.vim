@@ -9,6 +9,7 @@ call coc#config("coc.preferences",{
   \"maxCompleteItemCount": 10,
   \ "codeLens.enable": 1,
   \"diagnostic.virtualText": 1,
+  \"formatOnSaveFiletypes": ["java","css","markdown","c","go","python"],
   \})
 
 call coc#config("suggest",{
@@ -122,6 +123,7 @@ let g:coc_global_extensions = [
       \ 'coc-stylelint',
       \ 'coc-css',
       \ 'coc-java',
+      \ 'coc-rls',
       \ 'coc-clangd',
       \ 'coc-jedi',
       \ 'coc-go',
@@ -136,6 +138,7 @@ let g:coc_global_extensions = [
       \ 'coc-emmet',
       \ 'coc-html',
       \ 'coc-css',
+      \ 'coc-prettier',
       \ 'coc-tsserver',
       \ 'coc-neosnippet',
       \ 'coc-sh',
