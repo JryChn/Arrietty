@@ -19,6 +19,8 @@ function! cocMapping#before() abort
   call SpaceVim#custom#LangSPC('java','xmap', ['a'], '<Plug>(coc-codeaction-selected)', 'Actions', 0)
   call SpaceVim#custom#LangSPC('c','nmap', ['a'], '<Plug>(coc-codeaction)', 'Actions', 0)
   call SpaceVim#custom#LangSPC('c','xmap', ['a'], '<Plug>(coc-codeaction-selected)', 'Actions', 0)
+  call SpaceVim#custom#LangSPC('rust','nmap', ['a'], '<Plug>(coc-codeaction)', 'Actions', 0)
+  call SpaceVim#custom#LangSPC('rust','xmap', ['a'], '<Plug>(coc-codeaction-selected)', 'Actions', 0)
   call SpaceVim#custom#LangSPC('python','nmap', ['a'], '<Plug>(coc-codeaction)', 'Actions', 0)
   call SpaceVim#custom#LangSPC('python','xmap', ['a'], '<Plug>(coc-codeaction-selected)', 'Actions', 0)
   call SpaceVim#custom#LangSPC('html','nmap', ['a'], '<Plug>(coc-codeaction)', 'Actions', 0)
@@ -27,6 +29,8 @@ function! cocMapping#before() abort
   call SpaceVim#custom#LangSPC('css','xmap', ['a'], '<Plug>(coc-codeaction-selected)', 'Actions', 0)
   call SpaceVim#custom#LangSPC('javascript','nmap', ['a'], '<Plug>(coc-codeaction)', 'Actions', 0)
   call SpaceVim#custom#LangSPC('javascript','xmap', ['a'], '<Plug>(coc-codeaction-selected)', 'Actions', 0)
+  call SpaceVim#custom#LangSPC('markdown','nmap', ['a'], '<Plug>(coc-codeaction)', 'Actions', 0)
+  call SpaceVim#custom#LangSPC('markdown','xmap', ['a'], '<Plug>(coc-codeaction-selected)', 'Actions', 0)
   "-----------build------------
   " call SpaceVim#custom#LangSPC('go','nmap', ['b'],
         " \ '<Plug>(go-build)',
@@ -42,11 +46,16 @@ function! cocMapping#before() abort
   call SpaceVim#custom#LangSPC('go','nmap', ['i'],
         \ 'call CocAction(''runCommand'', ''editor.action.organizeImport'')',
         \ 'auto import package', 1)
+  call SpaceVim#custom#LangSPC('java','nmap', ['i'],
+        \ 'call CocAction(''runCommand'', ''editor.action.organizeImport'')',
+        \ 'auto import package', 1)
   "-----------refactor------------
   call SpaceVim#custom#LangSPCGroupName('go',['R'],'Refactor')
   call SpaceVim#custom#LangSPCGroupName('java',['R'],'Refactor')
   call SpaceVim#custom#LangSPCGroupName('python',['R'],'Refactor')
   call SpaceVim#custom#LangSPCGroupName('c',['R'],'Refactor')
+  call SpaceVim#custom#LangSPCGroupName('rust',['R'],'Refactor')
+  call SpaceVim#custom#LangSPCGroupName('javascript',['R'],'Refactor')
   "rename
   call SpaceVim#custom#LangSPC('go','nmap', ['R','r'],
         \ '<Plug>(coc-rename)',
@@ -60,7 +69,16 @@ function! cocMapping#before() abort
   call SpaceVim#custom#LangSPC('c','nmap', ['R','r'],
         \ '<Plug>(coc-rename)',
         \ 'rename', 0)
+  call SpaceVim#custom#LangSPC('rust','nmap', ['R','r'],
+        \ '<Plug>(coc-rename)',
+        \ 'rename', 0)
+  call SpaceVim#custom#LangSPC('javascript','nmap', ['R','r'],
+        \ '<Plug>(coc-rename)',
+        \ 'rename', 0)
   " quickfix
+  call SpaceVim#custom#LangSPC('markdown','nmap', ['q'],
+        \ '<Plug>(coc-fix-current)',
+        \ 'Quick-Fix-Current', 0)
   call SpaceVim#custom#LangSPC('go','nmap', ['q'],
         \ '<Plug>(coc-fix-current)',
         \ 'Quick-Fix-Current', 0)
@@ -71,6 +89,18 @@ function! cocMapping#before() abort
         \ '<Plug>(coc-fix-current)',
         \ 'Quick-Fix-Current', 0)
   call SpaceVim#custom#LangSPC('c','nmap', ['q'],
+        \ '<Plug>(coc-fix-current)',
+        \ 'Quick-Fix-Current', 0)
+  call SpaceVim#custom#LangSPC('rust','nmap', ['q'],
+        \ '<Plug>(coc-fix-current)',
+        \ 'Quick-Fix-Current', 0)
+  call SpaceVim#custom#LangSPC('javascript','nmap', ['q'],
+        \ '<Plug>(coc-fix-current)',
+        \ 'Quick-Fix-Current', 0)
+  call SpaceVim#custom#LangSPC('css','nmap', ['q'],
+        \ '<Plug>(coc-fix-current)',
+        \ 'Quick-Fix-Current', 0)
+  call SpaceVim#custom#LangSPC('html','nmap', ['q'],
         \ '<Plug>(coc-fix-current)',
         \ 'Quick-Fix-Current', 0)
   "format
